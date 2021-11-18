@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrollama Test on zoom image</title>
+    <link rel="stylesheet" href="HCFV_styles.css">
+
+</head>
+<body>
+
+<article>
+    <p class="hwrd-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Commodo nulla facilisi nullam vehicula. Odio aenean sed adipiscing diam.</p>
+    <p class="hwrd-body">Semper auctor neque vitae tempus quam. In massa tempor nec feugiat. Enim eu turpis egestas pretium aenean. In vitae turpis massa sed elementum tempus egestas sed. </p>
+    <p class="hwrd-body">Potenti nullam ac tortor vitae purus. Suspendisse sed nisi lacus sed viverra tellus in. Nec sagittis aliquam malesuada bibendum arcu vitae elementum curabitur vitae. In fermentum posuere urna nec.</p>
+</article>
+<h1> Scrolly Start</h1>
+<!--Scrolly start-->
+<figure>
+    <!-- Recommended script setup -->
+    <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/scrollama"></script>
+    <script src="stickyfill.min.js"></script>
+
+    <style>
+        #scrolly {
+            position: relative;
+            width: auto;
+            margin-left: calc(-50vw + 50%);
+            margin-right: calc(-50vw + 50%);
+        }
+        /* ^This sets the margins, width and position of the scrolly section. relative is important here.*/
+
+        /*These zoom classes change the view of the image by changing its class*/
+        .zoom-0 {
+            transition-timing-function: ease-out;
+            transition: 0.8s;
+            transform: perspective(500px) translate3d(0, 0, 0);
+        }
+
+        .zoom-1 {
+            transition-timing-function: ease-in;
+            transition: 0.8s;
+            transform: perspective(500px) translate3d(-110px, 80px, 130px);
+        }
+        .zoom-2 {
+            transition-timing-function: ease-out;
+            transition: 0.8s;
+            transform: perspective(500px) translate3d(0, 0, 20px);
+        }
+        @media only screen and (max-width: 480px) {
+            .zoom-0 {
+                transition-timing-function: ease-out;
+                transition: 0.8s;
+                transform: perspective(500px) translate3d(-50px, 80px, 300px);
+            }
+
+            .zoom-1 {
+                transition-timing-function: ease-in;
+                transition: 0.8s;
+                transform: perspective(500px) translate3d(-50px, 200px, 300px);
+            }
+            .zoom-2 {
+                transition-timing-function: ease-out;
+                transition: 0.8s;
+                transform: perspective(500px) translate3d(-30px, 200px, 250px);
+            }
+        }
+
+        /*This class is static through all the zoom changes, use it to avoid repetitive work*/
+        .main-img {
+
+        }
+
+        /*This class keeps the div holding the image stuck to the background so it moves along with the text*/
+        #oil-stacks-img {
+            position: -webkit-sticky;
+            position: sticky;
+            width: 100%;
+            margin: 0;
+            top: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        /*This keeps the step divs with text in one place*/
+        #scrolly-steps {
+            position: relative;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+        /*This is the margin*/
+        #scrolly .step {
+            margin: 0 auto 2rem auto;
+            width: 50%;
+        }
+        @media only screen and (max-width: 480px) {
+            #scrolly .step {
+                padding: 0 1.44rem;
+                width: 100%;
+            }
+        }
+        /*Styling for the text in each step*/
+        #scrolly .step p {
+            text-align: left;
+            padding: 1rem;
+            margin: auto;
+            /* Newspaper off-white */
+            color: #F2F3F8;
+            /* Howard Blue Grey */
+            background: #1F2D3D;
+            box-shadow: 3px 4px 5px rgba(19, 30, 43, 0.3);
+            border-radius: 20px;
+        }
+        @media only screen and (max-width: 480px) {
+            #scrolly .step p {
+                padding: 10px;
+            }
+        }
+    </style>
+
+
+<!--start the scroll section here-->
+    <section id="scrolly">
+
+<!--here is where the image goes, I used an ai2html generated image here and kept that format.-->
+        <div id="oil-stacks-img" class="oil-stacks" style="" data-aspect-ratio="1.504" data-min-width="0">
+            <div style="padding: 0 0 66.5% 0;"></div>
+            <img id="drilling-img" class="main-img zoom-0" alt="" src="drilling-Artboard_1.png"/>
+        </div>
+
+<!--here are the steps with text, the data-step corresponds with the zoom-# in the syle section. change height for vertical spacing-->
+        <div id="scrolly-steps">
+            <div class="step" data-step="0" style="height: 500px;">
+                <p>Oh no, oil industry did bad things again. But we need to explain why things are bad first.</p>
+            </div>
+            <div class="step" data-step="1" style="height: 500px;">
+                <p>This is what they put in the air and what it does to the enviroment and human health. Look at how not great it is.</p>
+            </div>
+            <div class="step" data-step="2" style="height: 500px;">
+                <p>It is dangerous because of this and this, but also it contributes to climate change since methane traps 20 times more heat than Carbon Dioxide over a 100-year period.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <script>
+    // unleash the scrollama
+    const scroller = scrollama();
+
+    // there is some d3 used here cause it's handy
+    let oilstack = d3.select("oil-stacks-img");
+
+    // setup the instance, pass callback functions
+    scroller
+        .setup({
+            step: ".step",
+            debug: true
+        })
+        .onStepEnter((response) => {
+            response.element.classList.add('active');
+            // { element, index, direction }
+            // setting the css .zoom- as a variable
+            const zoom = 'zoom-'
+            const mainimg = 'main-img '
+            // setting the index as a variable to change the zoom
+            const level = response.index
+            // selecting the img and changing the class of the img to the zoom I want
+            d3.select('.main-img')
+            .attr('class', mainimg + zoom + level);
+
+        })
+
+        .onStepExit((response) => {
+            response.element.classList.remove('active')
+            // { element, index, direction }
+        });
+
+    // setup resize event
+    window.addEventListener("resize", scroller.resize);
+    </script>
+<!--Place to put caption credit-->
+    <figcaption>
+        <span>Nicole Sadek, Zach Van Arsdale for the Howard Center of Investigative Journalism</span>
+    </figcaption>
+
+</figure>
+<!--scrolly END-->
+<article>
+    <p>Integer malesuada nunc vel risus commodo viverra maecenas. Aliquam purus sit amet luctus venenatis. Ut pharetra sit amet aliquam. Risus quis varius quam quisque id diam vel quam elementum. Condimentum mattis pellentesque id nibh tortor id aliquet.</p>
+    <p>dio pellentesque diam volutpat commodo sed egestas. Id eu nisl nunc mi ipsum faucibus. Eget nullam non nisi est sit amet facilisis. Quis vel eros donec ac odio tempor orci dapibus.</p>
+    <p>Aliquet sagittis id consectetur purus ut. Habitant morbi tristique senectus et. Ipsum faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Est placerat in egestas erat imperdiet sed euismod nisi. Mattis enim ut tellus elementum. Pellentesque adipiscing commodo elit at imperdiet dui accumsan. </p>
+    <p>Porttitor leo a diam sollicitudin. Bibendum at varius vel pharetra vel turpis. Porttitor leo a diam sollicitudin tempor id eu nisl nunc. Varius duis at consectetur lorem donec massa. Duis at consectetur lorem donec massa sapien faucibus et molestie. Non odio euismod lacinia at quis risus sed vulputate odio. Et malesuada fames ac turpis. Sed risus pretium quam vulputate dignissim.</p>
+</article>
+</body>
+</html>

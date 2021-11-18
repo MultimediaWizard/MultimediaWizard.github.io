@@ -1,0 +1,34 @@
+/*
+The Howard Center for Investigative Journalism
+Flaring and Venting Project
+Site -> Zach Van Arsdale
+ */
+
+/* to speed some things up I use a shorthand CSS framework by bansel.io */
+
+@import "shorthand.css";
+@import url("https://use.typekit.net/axt1xqw.css");
+
+/* Howard Center Text Styles */
+
+p {
+    font-family: Utopia Std, Cambria, Georgia, Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+.hwrd-body {
+    font-size: 20px;
+    line-height: 24px;
+    width: calc(100% - 40px);
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 13px;
+}
+
+
+
+
+
