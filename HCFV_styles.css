@@ -9,6 +9,48 @@ Site -> Zach Van Arsdale
 @import "shorthand.css";
 @import url("https://use.typekit.net/axt1xqw.css");
 
+/*Creating some shorthand*/
+
+.o1 {
+    order: 1;
+}
+
+.o2 {
+    order: 2;
+}
+
+.o3 {
+    order: 3;
+}
+
+.o4 {
+    order: 4;
+}
+
+.o5 {
+    order: 5;
+}
+
+.tt-wd {
+    width: calc((100% - 40px)*2);
+    margin-left: calc((100% - 580px)*-1);
+    max-width: 1000px
+/*makes title wide*/
+}
+
+.br {
+    border: 3px solid #D8C27F;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 10px;
+    margin-bottom: 10px;
+/*break styling*/
+}
+
+.rm-bm {
+    margin-bottom: 0;
+/*removes bottom margin*/
+}
+
 /* Howard Center Text Styles */
 
 p {
@@ -16,16 +58,131 @@ p {
     font-style: normal;
     font-weight: normal;
     font-feature-settings: 'pnum' on, 'lnum' on;
+    padding-bottom: 16px;
+    /* CHANGED Newspaper off-white */
+    color: #b7c4cd;
 }
 
-.hwrd-body {
+body {
+    /* Howard Background Blue Grey */
+    background: #182432;
+}
+
+figure {
+    display: block;
+}
+/*Project Titles uses h5*/
+h5 {
+    font-family: Inter, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 144px;
+    line-height: 174px;
+    display: flex;
+    align-items: flex-end;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    /* Earth Lights */
+    background: rgb(244,219,144);
+    background: linear-gradient(180deg, rgba(244,219,144,1) 0%, rgba(216,194,127,1) 35%, rgba(193,173,115,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(3px 6px 4px rgb(5 22 44 / 25%));
+}
+
+h1 {
+    font-family: Inter, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    /* Earth Lights */
+    color: #D8C27F;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+.hwrd-h1-alt {
+    /* Howard Center Highlight */
+    color: #A7BCE6;
+}
+
+h2 {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 29px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    /* Earth Lights */
+    color: #D8C27F;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+.hwrd-h2-alt {
+    /* Howard Center Highlight */
+    color: #A7BCE6;
+}
+
+.hwrd-article {
     font-size: 20px;
-    line-height: 24px;
+    line-height: 32px;
     width: calc(100% - 40px);
-    max-width: 850px;
+    max-width: 720px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 13px;
+}
+
+@media screen and (min-width: 760px) {
+    html {
+        font-size: 120%;
+    }
+}
+
+.hwrd-article-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.hwrd-header-box {
+    width: calc((100% - 40px)*2);
+    margin-left: calc((100% - 580px)*-1);
+    max-width: 1000px;
+}
+
+.hwrd-header {
+    display: block;
+    width: 100%;
+}
+
+.glancebox {
+    /* Howard Popup blue grey */
+    background: #1F2D3D;
+    box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 47px;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+}
+
+@media only screen and (max-width: 480px) {
+    .glancebox {
+        box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 47px;
+        width: calc(100% - 5px);
+
+    }
+}
+
+.explainer-style {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: #1F2D3D;
+    border-radius: 20px ;
 }
 
 
