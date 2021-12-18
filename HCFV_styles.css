@@ -51,7 +51,15 @@ Site -> Zach Van Arsdale
 /*removes bottom margin*/
 }
 
-/* Howard Center Text Styles */
+.hid {
+    display: none!important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Howard Center Styles */
 
 p {
     font-family: Utopia Std, Cambria, Georgia, Times, serif;
@@ -66,6 +74,10 @@ p {
 body {
     /* Howard Background Blue Grey */
     background: #182432;
+}
+
+div {
+    display:block;
 }
 
 figure {
@@ -133,6 +145,14 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 13px;
+    display: block;
+}
+
+.hwrd-figure{
+    width: calc((100% - 40px)*2.5);
+    margin-left: calc((100% - 580px)*-1);
+    max-width: 1000px;
+    display: block;
 }
 
 @media screen and (min-width: 760px) {
@@ -167,6 +187,8 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     padding: 40px;
+    display: flex;
+    flex-direction: column;
 }
 
 @media only screen and (max-width: 480px) {
@@ -176,6 +198,26 @@ h2 {
         width: calc(100% - 5px);
 
     }
+}
+
+/*State Graph styling*/
+
+.y-axis{
+    font-family: Inter, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #D8C27F;
+}
+
+.x-axis{
+    font-family: Inter, Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    color: #D8C27F;
+}
+
+.tick{
+    color: #D8C27F;
 }
 
 .explainer-style {

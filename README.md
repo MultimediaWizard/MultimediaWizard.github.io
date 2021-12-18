@@ -1,2 +1,2 @@
 # MultimediaWizard.github.io
-[Scrollytelly link](scrollama template.html)
+[Scrollytelly link](scrollama template old.html)
