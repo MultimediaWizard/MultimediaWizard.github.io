@@ -4,10 +4,44 @@ Flaring and Venting Project
 Site -> Zach Van Arsdale
  */
 
-/* to speed some things up I use a shorthand CSS framework by bansel.io */
-
-/*@import "shorthand.css";*/
 @import url("https://use.typekit.net/axt1xqw.css");
+
+/*setting defaults*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, big, cite, code, em, img, small, strike, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+main, article, div, figure, iframe, video, img {
+    display:block;
+}
+
+textarea {
+    overflow: auto;
+}
+
+button {
+    cursor: pointer;
+}
+
+img, video {
+    height: auto;
+    max-width: 100%;
+    border-style: none;
+}
+
 
 /*Creating some shorthand*/
 
@@ -33,51 +67,36 @@ Site -> Zach Van Arsdale
 
 .tt-wd {
     width: calc((100% - 40px)*2);
-    margin-left: calc((100% - 580px)*-1);
+    /*margin-left: calc((100% - 580px)*-1);*/
     max-width: 1000px
-/*makes title wide*/
+    /*makes title wide*/
 }
 
 .br {
-    border: 3px solid #D8C27F;
+    border: 2px solid #D8C27F;
     box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
     margin-top: 10px;
     margin-bottom: 10px;
-/*break styling*/
+    /*break styling*/
+}
+
+@media only screen and (max-width: 1024px){
+    .br {
+        border: 2px solid #D8C27F;
+        box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.25);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /*break styling*/
+    }
 }
 
 .rm-bm {
     margin-bottom: 0;
-/*removes bottom margin*/
+    /*removes bottom margin*/
 }
 
 .hid {
     display: none!important;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, big, cite, code, em, img, small, strike, strong, sub, sup, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-}
-
-textarea {
-    overflow: auto;
-}
-
-button {
-    cursor: pointer;
 }
 
 /* Howard Center Styles */
@@ -97,14 +116,7 @@ body {
     background: #182432;
 }
 
-div {
-    display:block;
-}
-
-figure {
-    display: block;
-}
-/*Project Titles uses h5*/
+/*Project Titles uses h5 may be replaced by image/vector*/
 h5 {
     font-family: Inter, Arial, sans-serif;
     font-style: normal;
@@ -135,11 +147,6 @@ h1 {
     margin-bottom: 11px;
 }
 
-.alt {
-    /* Howard Center Highlight */
-    color: #A7BCE6;
-}
-
 h2 {
     font-family: Inter;
     font-style: normal;
@@ -153,14 +160,21 @@ h2 {
     margin-bottom: 11px;
 }
 
-.hwrd-h2-alt {
-    /* Howard Center Highlight */
+.alt {
+    /* Howard Center Highlight alt color*/
     color: #A7BCE6;
 }
 
 .hwrd-main {
-    max-width: 1300px;
+    /*max-width: 1300px;*/
     display: block;
+    margin: 0 0px;
+}
+
+@media screen and (max-width: 800px) {
+    .hwrd-main {
+        margin: 0 10px;
+    }
 }
 
 .hwrd-article {
@@ -173,49 +187,29 @@ h2 {
     display: block;
 }
 
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 800px) {
     .hwrd-article {
         width: calc(((100% - 40px)/2)*8);
         max-width: 720px;
     }
 }
 
-img, video {
-    height: auto;
-    max-width: 100%;
-    border-style: none;
-}
-
-/*TODO fix this hwrd figure responsiveness*/
+/*figure image adjustments*/
 .hwrd-figure{
 
 }
 
-@media screen and (min-width: 0px) {
-    .hwrd-figure{
-        /*margin-left: 0;*/
-        /*margin-right: 0;*/
-        width: calc(100% - 10px);
-    }
-}
-
-@media screen and (min-width: 800px) {
-    .hwrd-figure{
-        /*margin-left: 0px;*/
-        max-width: 680px
-    }
-}
-
 @media screen and (min-width: 1024px) {
     .hwrd-figure{
-        /*margin-left: -40px;*/
-
+        width: calc((((100% - 21rem)/8) * 12) + 15rem);
+        margin-left: calc(((((100% - 51rem)/8) * 2) + 4.5rem) * -1);
     }
 }
 
-@media screen and (min-width: 760px) {
-    html {
-        font-size: 120%;
+@media screen and (min-width: 1440px) {
+    .hwrd-figure{
+        width: calc((((100% - 8rem)/8) * 12) + 15rem);
+        margin-left: calc(((((100% - 12rem)/8) * 2) + 4.5rem) * -1);
     }
 }
 
@@ -226,10 +220,17 @@ img, video {
     flex-direction: column;
 }
 
-.hwrd-header-box {
-    width: calc((100% - 40px)*2);
-    margin-left: calc((100% - 580px)*-1);
-    max-width: 1000px;
+.hwrd-header-wide {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+    .hwrd-header-wide{
+        width: calc((100% - 40px)*2);
+        margin-left: calc((100% - 580px)*-1);
+        max-width: 1000px;
+    }
 }
 
 .hwrd-header {
@@ -237,20 +238,33 @@ img, video {
     width: 100%;
 }
 
-.hwrd-caption {
+.hwrd-author {
     /* Howard Center Highlight */
     color: #A7BCE6;
     font-size: 20px;
     line-height: 24px;
+}
+
+@media only screen and (max-width: 480px){
+    .hwrd-author {
+        font-size: 17px;
+    }
 }
 
 .best-friend {
     /* Howard Center Highlight */
     color: #A7BCE6;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
 }
 
+.hwrd-caption-box {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/*State glanceboxes*/
 .glancebox {
     /* Howard Popup blue grey */
     background: #1F2D3D;
@@ -270,7 +284,6 @@ img, video {
         box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
         border-radius: 47px;
         width: calc(100% - 5px);
-
     }
 }
 
@@ -300,8 +313,4 @@ img, video {
     background-color: #1F2D3D;
     border-radius: 20px ;
 }
-
-
-
-
 

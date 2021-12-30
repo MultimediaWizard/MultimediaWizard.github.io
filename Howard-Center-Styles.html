@@ -3,31 +3,448 @@
 <head>
     <meta charset="UTF-8">
     <title>Styles</title>
-    <link rel="stylesheet" href="HCFV_styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="hwrd-gaslit.css">
 </head>
 <body>
 <!--TODO Captions, author, body styling, embeds, finalize design (check examples)-->
+<main class="hwrd-main">
 <article class="hwrd-article">
     <h5>GASLIT</h5>
-<div class="hwrd-article-head">
-    <h1 class="o2 tt-wd rm-bm">h1 Article title: Jimmy learns how to use the internet for first time</h1>
+<div class="hwrd-header-wide">
+    <h1 class="o2 rm-bm">h1 Article title: Jimmy learns how to use the internet for first time</h1>
 <!--o# classes change display order-->
 <!--    <h1 class="hwrd-h1-alt o1">h1 Alternate Article title</h1>-->
-    <h2 class="o3 tt-wd">h2 Subhead: The Howard Center for Investigative Journalism now has a website</h2>
+    <h2 class="o3">h2 Subhead: The Howard Center for Investigative Journalism now has a website</h2>
 <!--    <h2 class="hwrd-h2-alt o3">h2 Alternate subhead</h2>-->
-    <figure class="hwrd-header-box o1">
+    <figure class="o1">
         <img class="hwrd-header" src="img/BU3I3371.jpg" alt width="2000">
         <figcaption class="hwrd-caption-box">
-            <span class="hwrd-caption"></span>
-            <span class="best-friend"></span>
+            <span class="best-friend">By <strong>Jimmy Coultier</strong> for the Howard Center for Investigative Journalism</span>
         </figcaption>
     </figure>
     <hr class="o4 tt-wd br">
+    <div class="o5 hwrd-caption-box">
+        <span class="hwrd-author">By <strong>Jimmy Coultier</strong> and <strong>Zach Van Arsdale</strong></span>
+        <span class="hwrd-author">Howard Center for Investigative Journalism</span>
+    </div>
 </div>
-    <h3>h3 smaller subhead</h3>
-    <h4>h4 Additional subhead style</h4>
     <p>Body paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet bibendum enim facilisis gravida neque convallis. Pharetra sit amet aliquam id diam maecenas ultricies mi eget. Sem et tortor consequat id porta nibh venenatis cras. Vitae tortor condimentum lacinia quis vel. Adipiscing tristique risus nec feugiat. Massa enim nec dui nunc. Morbi non arcu risus quis varius quam quisque. Enim ut tellus elementum sagittis vitae et. Quis viverra nibh cras pulvinar. At volutpat diam ut venenatis tellus in metus. Imperdiet proin fermentum leo vel orci.</p>
     <p>Body paragrah: Dolor sed viverra ipsum nunc aliquet bibendum enim. Lacinia quis vel eros donec ac odio tempor orci dapibus. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Tincidunt augue interdum velit euismod in pellentesque. Risus ultricies tristique nulla aliquet enim. Integer quis auctor elit sed vulputate mi sit. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Massa sed elementum tempus egestas sed sed risus pretium. Fusce ut placerat orci nulla pellentesque dignissim. Viverra orci sagittis eu volutpat.</p>
+    <h2>
+        Explanatory Graphic Scrollytelly Text
+    </h2>
+    <hr class="br">
+    <figure class="hwrd-figure">
+        <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
+        <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+        <script src="https://unpkg.com/scrollama"></script>
+        <script src="stickyfill.min.js"></script>
+
+        <style>
+            .scrolly {
+                /* FOR DEBUG ONLY */
+                /*border: 4px dashed blue;*/
+            }
+
+            .scrolly-graphics {
+                height: 100vh;
+                overflow: hidden;
+                position: sticky;
+                top: 0;
+                z-index: 0;
+            }
+
+            .scrolly-graphic {
+                height: 100vh;
+                position: absolute;
+                display: none;
+            }
+
+            .scrolly-graphic.is-active {
+                display: block;
+            }
+
+            .scrolly-graphic-content {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .scrolly-step {
+                height: 100vh;
+                position: relative;
+                z-index: 1;
+                -webkit-transform: translate3d(0, 0, 0); /* fixes safari bug */
+                /* FOR DEBUG ONLY */
+                /*outline: 2px dashed red;*/
+                /*background-color: rgba(255, 0, 0, 0.5);*/
+                /*margin-bottom: 100px;*/
+            }
+
+            .scrolly-step-short {
+                height: 50vh;
+            }
+
+            .scrolly-step-content {
+                background: #1F2D3D;
+                box-shadow: 3px 4px 5px rgba(19, 30, 43, 0.3);
+                border-radius: 20px;
+                /*color: ;*/
+                padding: 1rem;
+                width: 85%;
+                margin: 0 auto;
+            }
+
+            .scrolly-step-content p {
+                padding-bottom: 0px;
+                font-size: 22px;
+            }
+
+            @media screen and (max-width: 1024px){
+                .scrolly-step-content p {
+                    font-size: 20px;
+                    line-height: 28px;
+                }
+            }
+            /*FOR MOBILE*/
+            @media screen and (max-width: 480px){
+                .scrolly-step-content p {
+                    line-height: 21px;
+                    font-size: 17px;
+                }
+            }
+
+            @media screen and (min-width: 900px) {
+
+                .scrolly-step-content {
+                    width: 55%;
+                }
+
+                .scrolly-step-content-right {
+                    transform: translateX(50%);
+                    margin-right: 15%;
+                }
+
+                .scrolly-step-content-long{
+                    width: 80%;
+                }
+
+                .scrolly-step-content-left {
+                    transform: translateX(-50%);
+
+                }
+
+            }
+
+            .scrolly-step-content p:last-child {
+                margin-bottom: 0;
+            }
+
+            /*transform images if needed*/
+            #g-slide-1-Artboard_1-img {
+            perspective(6px) translate3d(-3133px, 52px, -9px)
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-1-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-2-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-2-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-3-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-3-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-4-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-4-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-5-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-5-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-6-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-6-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-7-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-7-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-8-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-8-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-9-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-9-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+            #g-slide-10-Artboard_1-img {
+                transform: perspective(500px) translate3d(1px, 1px, 1px);
+            }
+            @media screen and (max-width: 480px){
+                #g-slide-10-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }#g-slide-11-Artboard_1-img {
+                 transform: perspective(500px) translate3d(1px, 1px, 1px);
+             }
+            @media screen and (max-width: 480px){
+                #g-slide-11-Artboard_1-img {
+                    transform: perspective(500px) translate3d(1px, 1px, 1px);
+                }
+            }
+
+
+        </style>
+
+        <div class="scrolly scrolly-1">
+            <div class="scrolly-graphics">
+                <div class="scrolly-graphic scrolly-graphic-1 is-active">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-1-Artboard_1-img" class="" alt="" src="img/slide-1-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-2">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-2-Artboard_1-img" class="" alt="" src="img/slide-2-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-3">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-3-Artboard_1-img" class="" alt="" src="img/slide-3-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-4">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-4-Artboard_1-img" class="" alt="" src="img/slide-4-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-5">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-5-Artboard_1-img" class="" alt="" src="img/slide-5-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-6">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-6-Artboard_1-img" class="" alt="" src="img/slide-6-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-7">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-7-Artboard_1-img" class="" alt="" src="img/slide-7-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-8">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-8-Artboard_1-img" class="" alt="" src="img/slide-8-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-9">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-9-Artboard_1-img" class="" alt="" src="img/slide-9-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-10">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-10-Artboard_1-img" class="" alt="" src="img/slide-10-Artboard_1.png">
+                    </div>
+                </div>
+
+                <div class="scrolly-graphic scrolly-graphic-11">
+                    <div class="scrolly-graphic-content">
+                        <img id="g-slide-11-Artboard_1-img" class="" alt="" src="img/slide-11-Artboard_1.png">
+                    </div>
+                </div>
+
+            </div>
+            <!-- end .scrolly-graphics -->
+
+
+            <div class="scrolly-step" data-step="scrolly-graphic-1">
+                <div class="is-active scrolly-step-content">
+                    <p>
+                        We use natural gas every day to heat our homes, cook our food and dry our clothes. But where does natural gas come from and how do its emissions contribute to climate change?
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="scrolly-step" data-step="scrolly-graphic-2" data-scrollama-index="0">
+                <div class="scrolly-step-content">
+                    <p>
+                        Natural gas is a fossil fuel released from the ground during oil and gas drilling.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-3" data-scrollama-index="1">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        Fracking, a common form of drilling, is the process of injecting liquid into the ground at a high pressure, causing rock fixtures to crack open and release the natural gas and oil trapped inside.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-4" data-scrollama-index="2">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        The natural gas that is extracted can either be sold on the market, used at the wellsite or disposed of entirely.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-5" data-scrollama-index="3">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        Many drilling companies say it’s safer or more economical to dispose of the gas than to use or sell it. They do this by burning it off, or “flaring.”
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-6" data-scrollama-index="4">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        Natural gas is composed of methane and other harmful gases, but flaring burns away a large percentage of those compounds, releasing mostly carbon dioxide into the atmosphere.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-7" data-scrollama-index="5">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        However, many malfunctioning flares burn away less of the methane than they’re supposed to.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-8" data-scrollama-index="5">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        These inefficient flares push a larger percentage of the compound into the atmosphere.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-9" data-scrollama-index="5">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        Some flares are unlit and simply “vent” the pure methane directly into the air.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-10" data-scrollama-index="5">
+                <div class="scrolly-step-content scrolly-step-content-right">
+                    <p>
+                        Venting is invisible to the naked eye, yet it's more harmful than flaring.
+                    </p>
+                </div>
+            </div>
+
+            <div class="scrolly-step" data-step="scrolly-graphic-11" data-scrollama-index="5">
+                <div class="scrolly-step-content scrolly-step-content-long">
+                    <p>
+                        Methane released during flaring and venting has the potential to trap heat in the earth’s atmosphere about 86 times more than carbon dioxide within a 20-year period.
+                    </p>
+                </div>
+            </div>
+
+            <!-- end scrolly steps -->
+        </div>
+        <!-- end .scrolly-1 -->
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+
+                const scrollys = document.querySelectorAll(".scrolly");
+                scrollys.forEach(function (item) {
+                    const scrolly = item;
+                    const scrollyGraphics =
+                        scrolly.querySelectorAll(".scrolly-graphic");
+                    const scrollySteps = scrolly.querySelectorAll(".scrolly-step");
+
+                    // initialize scrollama
+                    const scroller = scrollama();
+                    scroller
+                        .setup({
+                            step: scrollySteps,
+                            offset: 0.75,
+                            debug: false,
+                        })
+                        .onStepEnter((response) => {
+                            // { element, index, direction }
+                            const selector = "." + response.element.dataset.step;
+                            const graphic = scrolly.querySelector(selector);
+                            scrollyGraphics.forEach(function (item) {
+                                if (item == graphic) {
+                                    item.classList.add("is-active");
+                                } else {
+                                    item.classList.remove("is-active");
+                                }
+                            });
+                        });
+                });
+
+            });
+        </script>
+
+        <figcaption>
+            Nicole Sadek and Zach Van Arsdale for the Howard Center
+        </figcaption>
+
+
+
+    </figure>
+
+    <p>
+        Eliminating methane emissions has become a global rallying cry, as climate scientists warn of irreversible environmental damage. Experts call eliminating routine flaring “low-hanging fruit” in the mission to slow climate change.
+    </p>
 
 </article>
 
@@ -203,5 +620,7 @@
 
         </script>
 </div>
+
+</main>
 </body>
 </html>
