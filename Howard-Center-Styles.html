@@ -485,7 +485,7 @@
 
         </style>
         <!-- Create a div where the graph will take place -->
-        <div id="colorado-data-viz"></div>
+        <div id="alaska-data-viz"></div>
         <div>
         <!-- Add 2 buttons -->
         <button onclick="update(data1)">2012</button>
@@ -547,7 +547,7 @@
                 height = 400 - margin.top - margin.bottom;
 
             // append the svg object to the body of the page
-            var svg = d3.select("#colorado-data-viz")
+            var aksvg = d3.select("#alaska-data-viz")
                 .append("svg")
                 .attr("width", width + margin.left + margin.right)
                 .attr("height", height + margin.top + margin.bottom)
@@ -560,7 +560,7 @@
                 .range([ 0, width ])
                 .domain(data1.map(function(d) { return d.group; }))
                 .padding(0.2);
-            svg.append("g")
+            aksvg.append("g")
                 .attr("transform", "translate(0," + height + ")")
                 .attr("class", "x-axis")
                 .call(d3.axisBottom(x))
@@ -569,12 +569,12 @@
             var y = d3.scaleLinear()
                 .domain([0, 8])
                 .range([ height, 0]);
-            svg.append("g")
+            aksvg.append("g")
                 .attr("class", "y-axis")
                 .call(d3.axisLeft(y));
 
             //Y label
-            svg.append("text")
+            aksvg.append("text")
                 .attr("class", "y label")
                 .attr("text-anchor", "end")
                 .attr("y", 6)
@@ -598,7 +598,7 @@
             // A function that create / update the plot for a given variable:
             function update(data) {
 
-                var u = svg.selectAll("rect")
+                var u = aksvg.selectAll("rect")
                     .data(data)
 
                 u

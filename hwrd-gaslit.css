@@ -99,6 +99,14 @@ img, video {
     display: none!important;
 }
 
+.fix {
+    position: fixed;
+}
+
+.static {
+    position: static;
+}
+
 /* Howard Center Styles */
 
 p {
@@ -148,7 +156,7 @@ h1 {
 }
 
 h2 {
-    font-family: Inter;
+    font-family: Inter, Arial, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -158,6 +166,15 @@ h2 {
     color: #D8C27F;
     margin-top: 11px;
     margin-bottom: 11px;
+}
+
+h3{
+    font-family: Utopia Std, Cambria, Georgia, Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    padding-bottom: 11px;
+    color: #D8C27F;
 }
 
 .alt {
@@ -264,29 +281,6 @@ h2 {
     flex-direction: column;
 }
 
-/*State glanceboxes*/
-.glancebox {
-    /* Howard Popup blue grey */
-    background: #1F2D3D;
-    box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 47px;
-    width: calc(100% - 40px);
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-@media only screen and (max-width: 480px) {
-    .glancebox {
-        box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 47px;
-        width: calc(100% - 5px);
-    }
-}
-
 /*State Graph styling*/
 
 .y-axis{
@@ -314,3 +308,215 @@ h2 {
     border-radius: 20px ;
 }
 
+/*.state-page{
+
+}
+
+@media screen and (min-width: 1024px) {
+    .state-page{
+        width: calc((((100% - 21rem)/8) * 12) + 15rem);
+        margin-left: calc(((((100% - 51rem)/8) * 2) + 4.5rem) * -1);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .state-page{
+        width: calc((((100% - 8rem)/8) * 12) + 15rem);
+        margin-left: calc(((((100% - 12rem)/8) * 2) + 4.5rem) * -1);
+    }
+}*/
+
+.state-map {
+    -webkit-filter: drop-shadow( 4px 6px 4px rgba(10, 19, 38, 0.8) );
+    filter: drop-shadow( 4px 6px 4px rgba(10, 19, 38, 0.8) );
+    transform: translate(-5px);
+}
+@media screen and (min-width: 1024px) {
+    .state-map {
+        width: calc((((100% - 10rem)/8) * 12) + 15rem);
+        margin-left: calc(((((100% - 18rem)/8) * 2) + 4.5rem) * -1);
+        transform: translate(0px 0px);
+    }
+}
+.state-grow {
+    transition: all .3s ease-in-out;
+}
+.state-grow:hover {
+    transform: translate3d(0px, 0px, 0px) scale(1.18);
+    -webkit-filter: drop-shadow( 4px 6px 4px rgba(16, 25, 44, 0.6) );
+    filter: drop-shadow( 4px 6px 4px rgba(16, 25, 44, 0.6) );
+    fill: #D8C27F;
+}
+
+.mp-ak.state-grow:hover {
+    transform: translate3d(0px, 0px, 0px) scale(1.27);
+    -webkit-filter: drop-shadow( 4px 6px 4px rgba(16, 25, 44, 0.6) );
+    filter: drop-shadow( 4px 6px 4px rgba(16, 25, 44, 0.6) );
+}
+
+.mp-tx.state-grow:hover {
+    transform: translate3d(0px, 0px, 0px) scale(1.16);
+    -webkit-filter: drop-shadow( 4px 6px 4px rgba(16, 25, 44, 0.6) );
+    filter: drop-shadow( 4px 6px 4px rgba(16, 25, 44, 0.6) );
+}
+/*Putting states below to change orgins*/
+/*.mp-tx {
+    transform-origin: 34% 57%;
+}
+.mp-la {
+    transform-origin: 50% 66%;
+}
+.mp-nm {
+    transform-origin: 22% 55%;
+}
+.mp-ak {
+    transform-origin: 13% 68%;
+}
+.mp-co {
+    transform-origin: 23% 42%;
+}
+.mp-ks {
+    transform-origin: 36% 44%;
+}
+.mp-ok {
+    transform-origin: 38% 52%;
+}
+.mp-ut {
+    transform-origin: 15% 41%;
+}
+.mp-wy {
+    transform-origin: 20% 32%;
+}
+.mp-mt {
+    transform-origin: 14% 21%;
+}
+.mp-nd {
+    transform-origin: 32% 21%;
+}
+.mp-wv {
+    transform-origin: 68% 42%;
+}
+.mp-pa {
+    transform-origin: 71% 36%;
+}*/
+
+.mp-tx {
+    transform-origin: 40% 78%;
+}
+.mp-la {
+    transform-origin: 59% 80%;
+}
+.mp-nm {
+    transform-origin: 34% 69%;
+}
+.mp-ak {
+    transform-origin: 13% 87%;
+}
+.mp-co {
+    transform-origin: 34% 55%;
+}
+.mp-ks {
+    transform-origin: 45% 55%;
+}
+.mp-ok {
+    transform-origin: 44% 62%;
+}
+.mp-ut {
+    transform-origin: 25% 52%;
+}
+.mp-wy {
+    transform-origin: 30% 40%;
+}
+.mp-mt {
+    transform-origin: 28% 28%;
+}
+.mp-nd {
+    transform-origin: 45% 28%;
+}
+.mp-wv {
+    transform-origin: 76% 52%;
+}
+.mp-pa {
+    transform-origin: 80% 44%;
+}
+
+.state-select {
+    display: flex;
+    margin-left: 0;
+    transform: translate(0, 0);
+    flex-direction: column;
+}
+
+@media screen and (min-width: 480px) {
+    .state-select {
+        display: flex;
+        margin-left: 30%;
+        transform: translate(0, 0);
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .state-select {
+        display: flex;
+        margin-left: 60%;
+        transform: translate(-17%, -60%);
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .state-cont {
+        margin-bottom: 30px;
+    }
+}
+
+/*GLANCEBOXES*/
+
+.glancebox {
+    /* Howard Popup blue grey */
+    background: #1F2D3D;
+    box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 47px;
+    width: calc(100% - 40px);
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+}
+
+@media only screen and (max-width: 480px) {
+    .glancebox {
+        box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 47px;
+        width: calc(100% - 5px);
+    }
+}
+
+.glancebox-inside {
+    overflow: scroll;
+    scroll-behavior: smooth;
+
+}
+::-webkit-scrollbar {
+    display: none;
+}
+/*states*/
+.ak-glancebox {
+    position: fixed;
+    left: 50%;
+    /*TOP does what I want*/
+    top: 110vh;
+    webkit-transform:  translateX(-50%);
+    transform:  translateX(-50%);
+    transition: all 1.2s ease;
+    /*puts on top*/
+    z-index: 10;
+}
+
+.ak-move {
+    top: 4vh;
+}
