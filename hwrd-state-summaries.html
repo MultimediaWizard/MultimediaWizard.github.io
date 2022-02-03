@@ -11,7 +11,7 @@
     <article class="hwrd-article">
         <div class="static state-cont">
 <!--          TODO add exception to class, make larger, center more-->
-          <h1>How flaring is tracked in each major oil producing state</h1>
+          <h1 class="hwrd-asu-h1">How flaring is tracked in each major oil producing state</h1>
 <!--Below contains US map-->
           <div class="state-map" >
               <svg id="g-hwrd-states-map-Artboard_1-img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" x="0px" y="0px" viewBox="0 50 1024 610" overflow="visible" xml:space="preserve">
@@ -87,9 +87,9 @@
 <!--End state map-->
 <!--Begin explanation and state selector-->
               <div class="state-select" style="">
-                  <p style="color:#D8C27F; font-family:Inter, Arial, sans-serif; font-weight: bold;line-height: 22px; font-size: 1.05rem" >Click on a highlighted state to view local flaring data and regulations, or select a state below.</p>
-                  <select name="states" id="state-select">
-                      <option value="">Select state</option>
+                  <p style="color:#516da6; font-family:Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-serif; font-weight: bold;line-height: 22px; font-size: 1.05rem" >Click on a highlighted state to view local flaring data and regulations, or select a state below.</p>
+                  <select name="states" id="state-select" onchange="stateSelect();">
+                      <option value="none">Select state</option>
                       <option value="alaska">Alaska</option>
                       <option value="colorado">Colorado</option>
                       <option value="kansas">Kansas</option>
@@ -108,197 +108,543 @@
 <!--End explanation and state selector-->
           </div>
 
-        <h3>About the state summaries</h3>
+        <h2 class="hwrd-h2">About the state summaries</h2>
         <p>The Howard Center investigated 13 states with significant flaring activity and documented state flaring and venting data, state regulations and oversight agencies.</p>
-
+        <!--This is to get my silly stripes-->
+        <svg style="transform: translateX(1000px); position: fixed">
+            <pattern id="diagonalHatch" width="10" height="20" patternTransform="rotate(-52 0 0)" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="0" x2="0" y2="10" style="stroke:#D8C27F; stroke-width:20" stroke="#D8C27F"></line>
+            </pattern>
+        </svg>
       </article>
 <!--glancebox start-->
+<!--Alaska-->
     <div class="glancebox ak-glancebox" id="ak">
-        <div style="display: flex">
-            <div>
-                <p>Colorado</p>
-            </div>
-            <button>X</button>
-        </div>
-        <div class="glancebox-inside">
-            <iframe src="https://asu.maps.arcgis.com/apps/instant/basic/index.html?appid=111a1cd9187e48b4b832f6210461171d" width="600" height="450" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
-            <p>
-            Body paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet bibendum enim facilisis gravida neque convallis. Pharetra sit amet aliquam id diam maecenas ultricies mi eget. Sem et tortor consequat id porta nibh venenatis cras. Vitae tortor condimentum lacinia quis vel. Adipiscing tristique risus nec feugiat. Massa enim nec dui nunc. Morbi non arcu risus quis varius quam quisque. Enim ut tellus elementum sagittis vitae et. Quis viverra nibh cras pulvinar. At volutpat diam ut venenatis tellus in metus. Imperdiet proin fermentum leo vel orci.
-            </p>
-            <p>
-            Body paragrah: Dolor sed viverra ipsum nunc aliquet bibendum enim. Lacinia quis vel eros donec ac odio tempor orci dapibus. Mollis nunc sed id semper risus in hendrerit gravida rutrum. Nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Tincidunt augue interdum velit euismod in pellentesque. Risus ultricies tristique nulla aliquet enim. Integer quis auctor elit sed vulputate mi sit. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim. Massa sed elementum tempus egestas sed sed risus pretium. Fusce ut placerat orci nulla pellentesque dignissim. Viverra orci sagittis eu volutpat.
-            </p>
-            <!-- Load d3.js -->
-            <script src="https://d3js.org/d3.v4.js"></script>
+            <div class="item-display">
+                <div class="display-name-box">
+                    <p class="display-name">Alaska</p>
+                </div>
+                <svg id="ak-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
 
-            <!--This is to get my silly stripes-->
-            <svg>
-                <pattern id="diagonalHatch" width="10" height="20" patternTransform="rotate(-52 0 0)" patternUnits="userSpaceOnUse">
-                    <line x1="0" y1="0" x2="0" y2="10" style="stroke:#D8C27F; stroke-width:20" stroke="#D8C27F"></line>
-                </pattern>
+                    <g>
+                        <path d="M3 25L14.2157 13.7843L25 3" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M3 3L14.2157 14.2157L25 25" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                    </g>
+                    <p class="visually-hidden">Close</p>
+        </svg>
+            </div>
+            <div class="glancebox-inside hwrd-article glance-top-fade">
+                <div>
+                    <iframe class="state-iframe" src="https://asu.maps.arcgis.com/apps/instant/basic/index.html?appid=111a1cd9187e48b4b832f6210461171d" width="100%" height="" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
+                </div>
+                <hr class="hwrd-pg-brake">
+    <!--start info box-->
+                <div style="" class="infobox">
+                    <!--Text column, then graph-->
+                    <div class="infobox-txt" style="">
+                    <!--VIIRS DATA-->
+                        <div>
+                            <p style="margin-top: 10px">From 2012 to 2020,</p>
+                            <div style="width: fit-content">
+                                <!--!!!!VIIRS REPORTS!!!!-->
+                                <p class="hwrd-big-number">27,245,457,000</p>
+                                <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                            </div>
+                            <p>of flared gas was detected by the VIIRS satellite.</p>
+                        </div>
+                        <!--STATE DATA-->
+                        <div>
+                            <p>During the same period,</p>
+                            <div style="width: fit-content">
+                                <!--!!!!PROD REPORTS!!!!-->
+                                <p class="hwrd-big-number">49,702,160,510</p>
+                                <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                            </div>
+                            <p>of flared and vented gas was reported by companies in production reports.</p>
+                        </div>
+                        <!--STATE OVERSIGHT-->
+                        <div>
+                            <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
+                            <p style="padding-bottom: 6px">Alaska Oil and Gas Conservation Commission</p>
+                            <p>State of Alaska Department of Natural Resources: Division of Oil and Gas</p>
+                        </div>
+                    </div>
+                    <!--Graph column-->
+                    <div class="graphbox">
+                        <!-- Load d3.js -->
+                        <script src="https://d3js.org/d3.v4.js"></script>
+
+                        <style>
+                            .x-axis line {
+                                opacity: 0;
+                            }
+                            .State {
+                                fill: #5E7EBF;
+                            }
+
+                            .State:hover {
+
+                            }
+
+                            .Satellite {
+                                fill: url(#diagonalHatch);
+                            }
+
+                            .Satellite:hover {
+
+                            }
+
+                            .y {
+                                font-family: Inter, Arial, sans-serif;
+                                font-style: normal;
+                                font-weight: bold;
+                                color: #191919;
+                                font-size: 14px;
+                            }
+
+                        </style>
+                        <!-- Create a div where the graph will take place -->
+                        <div id="alaska-data-viz"></div>
+                        <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                            <!-- Add 2 buttons -->
+                            <button onclick="akupdate(akdata1)" class="data-viz-button">2012</button>
+                            <button onclick="akupdate(akdata2)" class="data-viz-button">2013</button>
+                            <button onclick="akupdate(akdata3)" class="data-viz-button">2014</button>
+                            <button onclick="akupdate(akdata4)" class="data-viz-button">2015</button>
+                            <button onclick="akupdate(akdata5)" class="data-viz-button">2016</button>
+                            <button onclick="akupdate(akdata6)" class="data-viz-button">2017</button>
+                            <button onclick="akupdate(akdata7)" class="data-viz-button">2018</button>
+                            <button onclick="akupdate(akdata8)" class="data-viz-button">2019</button>
+                            <button onclick="akupdate(akdata9)" class="data-viz-button">2020</button>
+                        </div>
+                        <script>
+
+                            // create data_set, these are put to BCM
+                            var akdata1 = [
+                                {group: "State reported", value: 49548561},
+                                {group: "Satellite recorded", value: 125233219.45},
+                            ];
+
+                            var akdata2 = [
+                                {group: "State reported", value: 75254751},
+                                {group: "Satellite recorded", value: 141805761.86},
+                            ];
+
+                            var akdata3 = [
+                                {group: "State reported", value: 91337724},
+                                {group: "Satellite recorded", value: 182579515.31},
+                            ];
+
+                            var akdata4 = [
+                                {group: "State reported", value: 105000500},
+                                {group: "Satellite recorded", value: 204646921.49},
+                            ];
+                            var akdata5 = [
+                                {group: "State reported", value: 84301823},
+                                {group: "Satellite recorded", value: 160627402.36},
+                            ];
+                            var akdata6 = [
+                                {group: "State reported", value: 90446858},
+                                {group: "Satellite recorded", value: 163498951.32},
+                            ];
+                            var akdata7 = [
+                                {group: "State reported", value: 154922097},
+                                {group: "Satellite recorded", value: 229158062.91},
+                            ];
+                            var akdata8 = [
+                                {group: "State reported", value: 206923587},
+                                {group: "Satellite recorded", value: 308455895.36},
+                            ];
+                            var akdata9 = [
+                                {group: "State reported", value: 122997438},
+                                {group: "Satellite recorded", value: 213903491.93},
+                            ];
+
+                            // set the dimensions and margins of the graph
+                            var margin = {top: 30, right: 30, bottom: 70, left: 95},
+                                width = 340 - margin.left - margin.right,
+                                height = 400 - margin.top - margin.bottom;
+
+                            // append the svg object to the body of the page
+                            let aksvg = d3.select("#alaska-data-viz")
+                                .append("svg")
+                                .attr("width", width + margin.left + margin.right)
+                                .attr("height", height + margin.top + margin.bottom)
+                                .append("g")
+                                .attr("transform",
+                                    "translate(" + margin.left + "," + margin.top + ")");
+
+                            // X axis
+                            var akx = d3.scaleBand()
+                                .range([ 0, width ])
+                                .domain(akdata1.map(function(d) { return d.group; }))
+                                .padding(0.2);
+                            aksvg.append("g")
+                                .attr("transform", "translate(0," + height + ")")
+                                .attr("class", "x-axis")
+                                .call(d3.axisBottom(akx))
+
+                            // Add Y axis
+                            var aky = d3.scaleLinear()
+                                .domain([30000000, 310000000])
+                                .range([ height, 0]);
+                            aksvg.append("g")
+                                .attr("class", "y-axis")
+                                .call(d3.axisLeft(aky));
+
+                            //Y label
+                            aksvg.append("text")
+                                .attr("class", "y label")
+                                .attr("text-anchor", "end")
+                                .attr("y", 6)
+                                .attr("dy", "-6.5em")
+                                .attr("dx", "-5em")
+                                .attr("transform", "rotate(-90)")
+                                .text("Thousand cubic feet");
+
+                            // coloring time!
+
+                            var t = d3.selectAll("text")
+                                .attr("fill", "#191919")
+
+                            var l = d3.selectAll("line")
+                                .attr("stroke", "#191919");
+
+                            var p = aksvg.selectAll("path")
+                                .attr("opacity", "0");
+
+
+                            // A function that create / update the plot for a given variable:
+                            function akupdate(akdata) {
+
+                                let aku = aksvg.selectAll("rect")
+                                    .data(akdata)
+
+                                aku
+                                    .enter()
+                                    .append("rect")
+                                    .merge(aku)
+                                    .transition()
+                                    .duration(1000)
+                                    .attr("x", function(d) { return akx(d.group); })
+                                    .attr("y", function(d) { return aky(d.value); })
+                                    .attr("width", akx.bandwidth())
+                                    .attr("height", function(d) { return height - aky(d.value); })
+                                    .attr("class", function(d) { return d.group; })
+                                    .attr("id", "akrect")
+
+                            }
+
+                            // Initialize the plot with the first dataset
+                            akupdate(akdata1)
+
+                        </script>
+                    </div>
+                </div>
+                <hr class="hwrd-pg-brake">
+                <p>
+                    Alaska ranks in the country’s top three states for natural gas production and in the top six for crude oil. Companies operate wells both onshore and offshore, and the majority of oil production takes place in the North Slope’s Colville Basin, which covers roughly 600 miles along Alaska’s northern coast.
+                </p>
+                <p>
+                    The Alaska Oil and Gas Conservation Commission regulates drilling, development and production in the state. The agency — led by three commissioners appointed by the governor — also oversees flaring and venting of natural gas according to rules outlined in Alaska’s administrative code. Separately, the Alaska Department of Natural Resources’ Division of Oil and Gas manages and leases state lands for oil and gas development.
+                </p>
+                <p>
+                    While state law prohibits the “waste of oil and gas,” the code includes exceptions allowing companies to burn off and release gas during emergencies and “for safety.” It also authorizes “de minimis” venting, defined as the release of gas “incidental to normal oil field operations.”
+                </p>
+                <p>
+                    Between 2012 and 2020, oil and gas operators in Alaska reported flaring and venting more than 27 billion cubic feet of gas. Because the commission has companies report their flared and vented volumes as a combined total, it’s impossible to make a direct comparison between the company-reported amounts and those recorded by satellites, which only detect flaring. Venting, which releases planet-warming methane straight into the air without a flare, is invisible to the naked eye.
+                </p>
+                <p>
+                    However, satellite data indicates Alaska’s actual volume of flared gas alone is more than 49.7 billion cubic feet — almost twice as high as the amount reported by companies for both flaring and venting.
+                </p>
+                <p>
+                    The Alaska Oil and Gas Conservation Commission declined an interview request from the Howard Center and asked that questions be submitted in writing instead. The agency did not respond by publication deadline to the submitted list, which included questions about the data discrepancy and whether company-reported volumes are audited in any way.
+                </p>
+                <p>
+                    The commission requires oil and gas companies to report monthly on how much they’ve flared and vented. That publicly available data is broken down into two categories: gas flared and vented for less than an hour and for one hour or longer. A third category called “pilot/purge gas” — gas that companies use to maintain a flare’s ignition, like a pilot light — is not considered flared gas by the commission.
+                </p>
+                <p>
+                    The commission requires companies to submit an explanation for flaring and venting that lasts one hour or longer. Commissioners may retroactively authorize flaring and venting required by emergencies or “necessary for facility operations, repairs, upgrades, or testing procedures.” Otherwise, the agency can classify the gas as “waste” in violation of the law.
+                </p>
+                <p>
+                    Companies that violate the law may be fined up to $10,000 per day. They can also face civil penalties for each 1,000 cubic feet of gas flared or vented at twice the market value of the gas.
+                </p>
+                <p>
+                    Records show the commission took two enforcement actions regarding flaring between 2012 to 2020. Neither resulted in the collection of fines, according to a commission hearing about non-emergency flaring and venting.
+                </p>
+                <!--authors-->
+                <p style="padding-bottom: 55px; font-size: 18px; text-align: right;" class="best-friend">
+                    –Laura Kraegel and Sarah Suwalsky
+                </p>
+            </div>
+    </div>
+
+    <div class="glancebox co-glancebox" id="co">
+        <div class="item-display">
+            <div class="display-name-box">
+                <p class="display-name">Colorado</p>
+            </div>
+            <svg id="co-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
+
+                <g>
+                    <path d="M3 25L14.2157 13.7843L25 3" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M3 3L14.2157 14.2157L25 25" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                </g>
+                <p class="visually-hidden">Close</p>
             </svg>
-            <style>
-                .x-axis line {
-                    opacity: 0;
-                }
-                .State {
-                    fill: #5E7EBF;
-                }
-                .Satellite {
-                    fill: url(#diagonalHatch);
-                }
-                .y {
-                    font-family: Inter, Arial, sans-serif;
-                    font-style: normal;
-                    font-weight: bold;
-                    color: #D8C27F;
-                    font-size: 14px;
-                }
-
-            </style>
-            <!-- Create a div where the graph will take place -->
-            <div id="alaska-data-viz"></div>
+        </div>
+        <div class="glancebox-inside hwrd-article glance-top-fade">
             <div>
-                <!-- Add 2 buttons -->
-                <button onclick="update(data1)">2012</button>
-                <button onclick="update(data2)">2013</button>
-                <button onclick="update(data3)">2014</button>
-                <button onclick="update(data4)">2015</button>
-                <button onclick="update(data5)">2016</button>
-                <button onclick="update(data6)">2017</button>
-                <button onclick="update(data7)">2018</button>
-                <button onclick="update(data8)">2019</button>
-                <button onclick="update(data9)">2020</button>
+                <iframe class="state-iframe" src="https://asu.maps.arcgis.com/apps/instant/basic/index.html?appid=111a1cd9187e48b4b832f6210461171d" width="100%" height="" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
             </div>
-            <script>
+            <hr class="hwrd-pg-brake">
+            <!--start info box-->
+            <div style="" class="infobox">
+                <!--Text column, then graph-->
+                <div class="infobox-txt" style="">
+                    <!--VIIRS DATA-->
+                    <div>
+                        <p style="margin-top: 10px">From 2012 to 2020,</p>
+                        <div style="width: fit-content">
+                            <!--!!!!VIIRS REPORTS!!!!-->
+                            <p class="hwrd-big-number">24,489,085,980</p>
+                            <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                        </div>
+                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                    </div>
+                    <!--STATE DATA-->
+                    <div>
+                        <p>During the same period,</p>
+                        <div style="width: fit-content">
+                            <!--!!!!PROD REPORTS!!!!-->
+                            <p class="hwrd-big-number">45,228,287,000</p>
+                            <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                        </div>
+                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                    </div>
+                    <!--STATE OVERSIGHT-->
+                    <div>
+                        <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
+                        <p style="padding-bottom: 6px">Colorado Oil and Gas Conservation Commission</p>
+                        <p>Department of Public Health and Environment (Air Quality Control Commission, Air Pollution Control Division)</p>
+                    </div>
+                </div>
+                <!--Graph column-->
+                <div class="graphbox">
+                    <!-- Load d3.js -->
+                    <script src="https://d3js.org/d3.v4.js"></script>
 
-                // create 2 data_set
-                var data1 = [
-                    {group: "State reported", value: 6.510004},
-                    {group: "Satellite recorded", value: 4.580742},
-                ];
+                    <style>
+                        .x-axis line {
+                            opacity: 0;
+                        }
+                        .State {
+                            fill: #5E7EBF;
+                        }
 
-                var data2 = [
-                    {group: "State reported", value: 7.915889},
-                    {group: "Satellite recorded", value: 5.555487},
-                ];
+                        .State:hover {
 
-                var data3 = [
-                    {group: "State reported", value: 5.341908},
-                    {group: "Satellite recorded", value: 4.572829},
-                ];
+                        }
 
-                var data4 = [
-                    {group: "State reported", value: 4.251488},
-                    {group: "Satellite recorded", value: 4.187837},
-                ];
-                var data5 = [
-                    {group: "State reported", value: 2.615860},
-                    {group: "Satellite recorded", value: 0.766125},
-                ];
-                var data6 = [
-                    {group: "State reported", value: 3.331882},
-                    {group: "Satellite recorded", value: 1.426132},
-                ];
-                var data7 = [
-                    {group: "State reported", value: 6.288545},
-                    {group: "Satellite recorded", value: 2.249836},
-                ];
-                var data8 = [
-                    {group: "State reported", value: 5.902962},
-                    {group: "Satellite recorded", value: 0.614391},
-                ];
-                var data9 = [
-                    {group: "State reported", value: 3.069749},
-                    {group: "Satellite recorded", value: 0.506703},
-                ];
+                        .Satellite {
+                            fill: url(#diagonalHatch);
+                        }
 
-                // set the dimensions and margins of the graph
-                var margin = {top: 30, right: 30, bottom: 70, left: 70},
-                    width = 300 - margin.left - margin.right,
-                    height = 400 - margin.top - margin.bottom;
+                        .Satellite:hover {
 
-                // append the svg object to the body of the page
-                var aksvg = d3.select("#alaska-data-viz")
-                    .append("svg")
-                    .attr("width", width + margin.left + margin.right)
-                    .attr("height", height + margin.top + margin.bottom)
-                    .append("g")
-                    .attr("transform",
-                        "translate(" + margin.left + "," + margin.top + ")");
+                        }
 
-                // X axis
-                var x = d3.scaleBand()
-                    .range([ 0, width ])
-                    .domain(data1.map(function(d) { return d.group; }))
-                    .padding(0.2);
-                aksvg.append("g")
-                    .attr("transform", "translate(0," + height + ")")
-                    .attr("class", "x-axis")
-                    .call(d3.axisBottom(x))
+                        .y {
+                            font-family: Inter, Arial, sans-serif;
+                            font-style: normal;
+                            font-weight: bold;
+                            color: #191919;
+                            font-size: 14px;
+                        }
 
-                // Add Y axis
-                var y = d3.scaleLinear()
-                    .domain([0, 8])
-                    .range([ height, 0]);
-                aksvg.append("g")
-                    .attr("class", "y-axis")
-                    .call(d3.axisLeft(y));
+                    </style>
+                    <!-- Create a div where the graph will take place -->
+                    <div id="colorado-data-viz"></div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                        <!-- Add 2 buttons -->
+                        <button onclick="coupdate(data1)" class="data-viz-button">2012</button>
+                        <button onclick="coupdate(data2)" class="data-viz-button">2013</button>
+                        <button onclick="coupdate(data3)" class="data-viz-button">2014</button>
+                        <button onclick="coupdate(data4)" class="data-viz-button">2015</button>
+                        <button onclick="coupdate(data5)" class="data-viz-button">2016</button>
+                        <button onclick="coupdate(data6)" class="data-viz-button">2017</button>
+                        <button onclick="coupdate(data7)" class="data-viz-button">2018</button>
+                        <button onclick="coupdate(data8)" class="data-viz-button">2019</button>
+                        <button onclick="coupdate(data9)" class="data-viz-button">2020</button>
+                    </div>
+                    <script>
 
-                //Y label
-                aksvg.append("text")
-                    .attr("class", "y label")
-                    .attr("text-anchor", "end")
-                    .attr("y", 6)
-                    .attr("dy", "-4.2em")
-                    .attr("dx", "-5em")
-                    .attr("transform", "rotate(-90)")
-                    .text("Billion cubic feet");
+                        // create data_set, these are put to MCF
+                        var data1 = [
+                            {group: "State reported", value: 6510004},
+                            {group: "Satellite recorded", value: 4580742},
+                        ];
 
-                // coloring time!
+                        var data2 = [
+                            {group: "State reported", value: 7915889},
+                            {group: "Satellite recorded", value: 5555487},
+                        ];
 
-                var t = d3.selectAll("text")
-                    .attr("fill", "#D8C27F")
+                        var data3 = [
+                            {group: "State reported", value: 5341908},
+                            {group: "Satellite recorded", value: 4572829},
+                        ];
 
-                var l = d3.selectAll("line")
-                    .attr("stroke", "#D8C27F");
+                        var data4 = [
+                            {group: "State reported", value: 4251488},
+                            {group: "Satellite recorded", value: 4187837},
+                        ];
+                        var data5 = [
+                            {group: "State reported", value: 2615860},
+                            {group: "Satellite recorded", value: 766125},
+                        ];
+                        var data6 = [
+                            {group: "State reported", value: 3331882},
+                            {group: "Satellite recorded", value: 1426132},
+                        ];
+                        var data7 = [
+                            {group: "State reported", value: 6288545},
+                            {group: "Satellite recorded", value: 2249836},
+                        ];
+                        var data8 = [
+                            {group: "State reported", value: 5902962},
+                            {group: "Satellite recorded", value: 614391},
+                        ];
+                        var data9 = [
+                            {group: "State reported", value: 3069749},
+                            {group: "Satellite recorded", value: 506703},
+                        ];
 
-                var p = aksvg.selectAll("path")
-                    .attr("opacity", "0");
+                        // set the dimensions and margins of the graph
+                        var margin = {top: 30, right: 30, bottom: 70, left: 95},
+                            width = 330 - margin.left - margin.right,
+                            height = 400 - margin.top - margin.bottom;
+
+                        // append the svg object to the body of the page
+                        let cosvg = d3.select("#colorado-data-viz")
+                            .append("svg")
+                            .attr("width", width + margin.left + margin.right)
+                            .attr("height", height + margin.top + margin.bottom)
+                            .append("g")
+                            .attr("transform",
+                                "translate(" + margin.left + "," + margin.top + ")");
+
+                        // X axis
+                        var x = d3.scaleBand()
+                            .range([ 0, width ])
+                            .domain(data1.map(function(d) { return d.group; }))
+                            .padding(0.2);
+                        cosvg.append("g")
+                            .attr("transform", "translate(0," + height + ")")
+                            .attr("class", "x-axis")
+                            .call(d3.axisBottom(x))
+
+                        // Add Y axis
+                        var y = d3.scaleLinear()
+                            .domain([0, 8000000])
+                            .range([ height, 0]);
+                        cosvg.append("g")
+                            .attr("class", "y-axis")
+                            .call(d3.axisLeft(y));
+
+                        //Y label
+                        cosvg.append("text")
+                            .attr("class", "y label")
+                            .attr("text-anchor", "end")
+                            .attr("y", 6)
+                            .attr("dy", "-5.5em")
+                            .attr("dx", "-5em")
+                            .attr("transform", "rotate(-90)")
+                            .text("Thousand cubic feet");
+
+                        // coloring time!
+
+                        var t = d3.selectAll("text")
+                            .attr("fill", "#191919")
+
+                        var l = d3.selectAll("line")
+                            .attr("stroke", "#191919");
+
+                        var p = cosvg.selectAll("path")
+                            .attr("opacity", "0");
 
 
-                // A function that create / update the plot for a given variable:
-                function update(data) {
+                        // A function that create / update the plot for a given variable:
+                        function coupdate(data) {
 
-                    var u = aksvg.selectAll("rect")
-                        .data(data)
+                            let cou = cosvg.selectAll("rect")
+                                .data(data)
 
-                    u
-                        .enter()
-                        .append("rect")
-                        .merge(u)
-                        .transition()
-                        .duration(1000)
-                        .attr("x", function(d) { return x(d.group); })
-                        .attr("y", function(d) { return y(d.value); })
-                        .attr("width", x.bandwidth())
-                        .attr("height", function(d) { return height - y(d.value); })
-                        .attr("class", function(d) { return d.group; })
+                            cou
+                                .enter()
+                                .append("rect")
+                                .merge(cou)
+                                .transition()
+                                .duration(1000)
+                                .attr("x", function(d) { return x(d.group); })
+                                .attr("y", function(d) { return y(d.value); })
+                                .attr("width", x.bandwidth())
+                                .attr("height", function(d) { return height - y(d.value); })
+                                .attr("class", function(d) { return d.group; })
+                                .attr("id","corect")
+                        }
 
-                }
+                        // Initialize the plot with the first dataset
+                        coupdate(data1)
 
-                // Initialize the plot with the first dataset
-                update(data1)
-
-            </script>
+                    </script>
+                </div>
+            </div>
+            <hr class="hwrd-pg-brake">
+            <p>
+                Alaska ranks in the country’s top three states for natural gas production and in the top six for crude oil. Companies operate wells both onshore and offshore, and the majority of oil production takes place in the North Slope’s Colville Basin, which covers roughly 600 miles along Alaska’s northern coast.
+            </p>
+            <p>
+                The Alaska Oil and Gas Conservation Commission regulates drilling, development and production in the state. The agency — led by three commissioners appointed by the governor — also oversees flaring and venting of natural gas according to rules outlined in Alaska’s administrative code. Separately, the Alaska Department of Natural Resources’ Division of Oil and Gas manages and leases state lands for oil and gas development.
+            </p>
+            <p>
+                While state law prohibits the “waste of oil and gas,” the code includes exceptions allowing companies to burn off and release gas during emergencies and “for safety.” It also authorizes “de minimis” venting, defined as the release of gas “incidental to normal oil field operations.”
+            </p>
+            <p>
+                Between 2012 and 2020, oil and gas operators in Alaska reported flaring and venting more than 27 billion cubic feet of gas. Because the commission has companies report their flared and vented volumes as a combined total, it’s impossible to make a direct comparison between the company-reported amounts and those recorded by satellites, which only detect flaring. Venting, which releases planet-warming methane straight into the air without a flare, is invisible to the naked eye.
+            </p>
+            <p>
+                However, satellite data indicates Alaska’s actual volume of flared gas alone is more than 49.7 billion cubic feet — almost twice as high as the amount reported by companies for both flaring and venting.
+            </p>
+            <p>
+                The Alaska Oil and Gas Conservation Commission declined an interview request from the Howard Center and asked that questions be submitted in writing instead. The agency did not respond by publication deadline to the submitted list, which included questions about the data discrepancy and whether company-reported volumes are audited in any way.
+            </p>
+            <p>
+                The commission requires oil and gas companies to report monthly on how much they’ve flared and vented. That publicly available data is broken down into two categories: gas flared and vented for less than an hour and for one hour or longer. A third category called “pilot/purge gas” — gas that companies use to maintain a flare’s ignition, like a pilot light — is not considered flared gas by the commission.
+            </p>
+            <p>
+                The commission requires companies to submit an explanation for flaring and venting that lasts one hour or longer. Commissioners may retroactively authorize flaring and venting required by emergencies or “necessary for facility operations, repairs, upgrades, or testing procedures.” Otherwise, the agency can classify the gas as “waste” in violation of the law.
+            </p>
+            <p>
+                Companies that violate the law may be fined up to $10,000 per day. They can also face civil penalties for each 1,000 cubic feet of gas flared or vented at twice the market value of the gas.
+            </p>
+            <p>
+                Records show the commission took two enforcement actions regarding flaring between 2012 to 2020. Neither resulted in the collection of fines, according to a commission hearing about non-emergency flaring and venting.
+            </p>
+            <!--authors-->
+            <p style="padding-bottom: 55px; font-size: 18px; text-align: right;" class="best-friend">
+                –Laura Kraegel and Sarah Suwalsky
+            </p>
         </div>
     </div>
+
 
 </main>
 <!--Glancebox functionality scripts-->
 
     <!--Script for making glanceboxes appear-->
 <script>
+
     let alaska = document.querySelector(".mp-ak");
     let colorado = document.querySelector(".mp-co");
     let kansas = document.querySelector(".mp-ks");
@@ -314,10 +660,186 @@
     let wyoming = document.querySelector(".mp-wy");
 
     let glanceAlaska = document.querySelector(".ak-glancebox");
+    let glanceColorado = document.querySelector(".co-glancebox");
+    let glanceKansas = document.querySelector(".ks-glancebox");
+    let glanceLouisiana = document.querySelector(".la-glancebox");
+    let glanceMontana = document.querySelector(".mt-glancebox");
+    let glanceNewMexico = document.querySelector(".nm-glancebox");
+    let glanceNorthDakota = document.querySelector(".nd-glancebox");
+    let glanceOklahoma = document.querySelector(".ok-glancebox");
+    let glancePennsylvania = document.querySelector(".pa-glancebox");
+    let glanceTexas = document.querySelector(".tx-glancebox");
+    let glanceWestVirgina = document.querySelector(".wv-glancebox");
+    let glanceUtah = document.querySelector(".ut-glancebox");
+    let glanceWyoming = document.querySelector(".wy-glancebox");
+
+    let alaskaClose = document.querySelector("#ak-close");
+    let coloradoClose = document.querySelector("#co-close");
+    let kansasClose = document.querySelector("#ks-close");
+    let louisianaClose = document.querySelector("#la-close");
+    let montanaClose = document.querySelector("#mt-close");
+    let newMexicoClose = document.querySelector("#nm-close");
+    let northDakotaClose = document.querySelector("#nd-close");
+    let oklahomaClose = document.querySelector("#ok-close");
+    let pennsylvaniaClose = document.querySelector("#pa-close");
+    let texasClose = document.querySelector("#tx-close");
+    let westVirginaClose = document.querySelector("#wv-close");
+    let utahClose = document.querySelector("#ut-close");
+    let wyomingClose = document.querySelector("#wy-close");
+
+
+    //select box function
+    function stateSelect()
+    {
+        var selectBox = document.getElementById("state-select").value;
+        if(selectBox==="alaska") {
+            glanceAlaska.setAttribute("class","glancebox ak-glancebox ak-move");
+        }
+        if(selectBox==="colorado") {
+            glanceColorado.setAttribute("class","glancebox co-glancebox co-move");
+        }
+        if(selectBox==="kansas") {
+            glanceKansas.setAttribute("class","glancebox ks-glancebox ks-move");
+        }
+        if(selectBox==="louisiana") {
+            glanceLouisiana.setAttribute("class","glancebox la-glancebox la-move");
+        }
+        if(selectBox==="montana") {
+            glanceMontana.setAttribute("class","glancebox mt-glancebox mt-move");
+        }
+        if(selectBox==="new-mexico") {
+            glanceNewMexico.setAttribute("class","glancebox nm-glancebox nm-move");
+        }
+        if(selectBox==="north-dakota") {
+            glanceNorthDakota.setAttribute("class","glancebox nd-glancebox nd-move");
+        }
+        if(selectBox==="oklahoma") {
+            glanceOklahoma.setAttribute("class","glancebox ok-glancebox ok-move");
+        }
+        if(selectBox==="pennsylvania") {
+            glancePennsylvania.setAttribute("class","glancebox pa-glancebox pa-move");
+        }
+        if(selectBox==="texas") {
+            glanceTexas.setAttribute("class","glancebox tx-glancebox tx-move");
+        }
+        if(selectBox==="west-virgina") {
+            glanceWestVirgina.setAttribute("class","glancebox wv-glancebox wv-move");
+        }
+        if(selectBox==="utah") {
+            glanceUtah.setAttribute("class","glancebox ut-glancebox ut-move");
+        }
+        if(selectBox==="wyoming") {
+            glanceWyoming.setAttribute("class","glancebox wy-glancebox wy-move");
+        }
+    }
+
+    //state map select functions
 
     alaska.addEventListener("mousedown", e => {
         glanceAlaska.setAttribute("class","glancebox ak-glancebox ak-move")
     });
+
+    alaskaClose.addEventListener("mousedown", e => {
+        glanceAlaska.setAttribute("class","glancebox ak-glancebox")
+    });
+
+    colorado.addEventListener("mousedown", e => {
+        glanceColorado.setAttribute("class","glancebox co-glancebox co-move")
+    });
+
+    coloradoClose.addEventListener("mousedown", e => {
+        glanceColorado.setAttribute("class","glancebox co-glancebox")
+    });
+
+    kansas.addEventListener("mousedown", e => {
+        glanceKansas.setAttribute("class","glancebox ks-glancebox ks-move")
+    });
+
+    kansasClose.addEventListener("mousedown", e => {
+        glanceKansas.setAttribute("class","glancebox ks-glancebox")
+    });
+
+    louisiana.addEventListener("mousedown", e => {
+        glanceLouisiana.setAttribute("class","glancebox la-glancebox la-move")
+    });
+
+    louisianaClose.addEventListener("mousedown", e => {
+        glanceLouisiana.setAttribute("class","glancebox la-glancebox")
+    });
+
+    montana.addEventListener("mousedown", e => {
+        glanceMontana.setAttribute("class","glancebox mt-glancebox mt-move")
+    });
+
+    montanaClose.addEventListener("mousedown", e => {
+        glanceMontana.setAttribute("class","glancebox mt-glancebox")
+    });
+
+    newMexico.addEventListener("mousedown", e => {
+        glanceNewMexico.setAttribute("class","glancebox nm-glancebox nm-move")
+    });
+
+    newMexicoClose.addEventListener("mousedown", e => {
+        glanceNewMexico.setAttribute("class","glancebox nm-glancebox")
+    });
+
+    northDakota.addEventListener("mousedown", e => {
+        glanceNorthDakota.setAttribute("class","glancebox nm-glancebox nm-move")
+    });
+
+    northDakotaClose.addEventListener("mousedown", e => {
+        glanceNorthDakota.setAttribute("class","glancebox nm-glancebox")
+    });
+
+    oklahoma.addEventListener("mousedown", e => {
+        glanceOklahoma.setAttribute("class","glancebox ok-glancebox ok-move")
+    });
+
+    oklahomaClose.addEventListener("mousedown", e => {
+        glanceOklahoma.setAttribute("class","glancebox ok-glancebox")
+    });
+
+    pennsylvania.addEventListener("mousedown", e => {
+        glancePennsylvania.setAttribute("class","glancebox pa-glancebox pa-move")
+    });
+
+    pennsylvaniaClose.addEventListener("mousedown", e => {
+        glancePennsylvania.setAttribute("class","glancebox pa-glancebox")
+    });
+
+    texas.addEventListener("mousedown", e => {
+        glanceTexas.setAttribute("class","glancebox tx-glancebox tx-move")
+    });
+
+    texasClose.addEventListener("mousedown", e => {
+        glanceTexas.setAttribute("class","glancebox tx-glancebox")
+    });
+
+    westVirgina.addEventListener("mousedown", e => {
+        glanceWestVirgina.setAttribute("class","glancebox wv-glancebox wv-move")
+    });
+
+    westVirginaClose.addEventListener("mousedown", e => {
+        glanceWestVirgina.setAttribute("class","glancebox wv-glancebox")
+    });
+
+    utah.addEventListener("mousedown", e => {
+        glanceUtah.setAttribute("class","glancebox ut-glancebox ut-move")
+    });
+
+    utahClose.addEventListener("mousedown", e => {
+        glanceUtah.setAttribute("class","glancebox ut-glancebox")
+    });
+
+    wyoming.addEventListener("mousedown", e => {
+        glanceWyoming.setAttribute("class","glancebox wy-glancebox wy-move")
+    });
+
+    wyomingClose.addEventListener("mousedown", e => {
+        glanceWyoming.setAttribute("class","glancebox wy-glancebox")
+    });
+
+
 
 </script>
 
