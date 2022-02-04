@@ -1,0 +1,252 @@
+    <div class="glancebox mt-glancebox" id="mt">
+        <div class="item-display">
+            <div class="display-name-box">
+                <p class="display-name">Montana</p>
+            </div>
+            <svg id="mt-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
+
+                <g>
+                    <path d="M3 25L14.2157 13.7843L25 3" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M3 3L14.2157 14.2157L25 25" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                </g>
+                <p class="visually-hidden">Close</p>
+            </svg>
+        </div>
+        <div class="glancebox-inside hwrd-article glance-top-fade">
+            <div>
+                <iframe class="state-iframe" src="https://asu.maps.arcgis.com/apps/instant/basic/index.html?appid=111a1cd9187e48b4b832f6210461171d" width="100%" height="" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
+            </div>
+            <hr class="hwrd-pg-brake">
+            <!--start info box-->
+            <div style="" class="infobox">
+                <!--Text column, then graph-->
+                <div class="infobox-txt" style="">
+                    <!--VIIRS DATA-->
+                    <div>
+                        <p style="margin-top: 10px">From 2012 to 2020,</p>
+                        <div style="width: fit-content">
+                            <!--!!!!VIIRS REPORTS!!!!-->
+                            <p class="hwrd-big-number">34,118,307,120</p>
+                            <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                        </div>
+                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                    </div>
+                    <!--STATE DATA-->
+                    <div>
+                        <p>During the same period,</p>
+                        <div style="width: fit-content">
+                            <!--!!!!PROD REPORTS!!!!-->
+                            <p class="hwrd-big-number">45,068,737,000</p>
+                            <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                        </div>
+                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                    </div>
+                    <!--STATE OVERSIGHT-->
+                    <div>
+                        <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
+                        <p style="padding-bottom: 6px">Montana Department of Natural Resources (Office of Conservation, Geological Oil and Gas Division) </p>
+                        <p>Montana Department of Environmental Quality (Office of Environmental Services)</p>
+                    </div>
+                </div>
+                <!--Graph column-->
+                <div class="graphbox">
+                    <!-- Load d3.js -->
+                    <script src="https://d3js.org/d3.v4.js"></script>
+
+                    <style>
+                        .x-axis line {
+                            opacity: 0;
+                        }
+                        .State {
+                            fill: #5E7EBF;
+                        }
+
+                        .State:hover {
+
+                        }
+
+                        .Satellite {
+                            fill: url(#diagonalHatch);
+                        }
+
+                        .Satellite:hover {
+
+                        }
+
+                        .y {
+                            font-family: Inter, Arial, sans-serif;
+                            font-style: normal;
+                            font-weight: bold;
+                            color: #191919;
+                            font-size: 14px;
+                        }
+
+                    </style>
+                    <!-- Create a div where the graph will take place -->
+                    <div id="Montana-data-viz"></div>
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                        <!-- Add 2 buttons -->
+                        <button onclick="mtupdate(mtdata1)" class="data-viz-button">2012</button>
+                        <button onclick="mtupdate(mtdata2)" class="data-viz-button">2013</button>
+                        <button onclick="mtupdate(mtdata3)" class="data-viz-button">2014</button>
+                        <button onclick="mtupdate(mtdata4)" class="data-viz-button">2015</button>
+                        <button onclick="mtupdate(mtdata5)" class="data-viz-button">2016</button>
+                        <button onclick="mtupdate(mtdata6)" class="data-viz-button">2017</button>
+                        <button onclick="mtupdate(mtdata7)" class="data-viz-button">2018</button>
+                        <button onclick="mtupdate(mtdata8)" class="data-viz-button">2019</button>
+                        <button onclick="mtupdate(mtdata9)" class="data-viz-button">2020</button>
+                    </div>
+                    <script>
+
+                        // create data_set, these are put to BCM
+                        var mtdata1 = [
+                            {group: "State reported", value: 5044037},
+                            {group: "Satellite recorded", value: 4821200.28},
+                        ];
+
+                        var mtdata2 = [
+                            {group: "State reported", value: 4949096},
+                            {group: "Satellite recorded", value: 3813461.81},
+                        ];
+
+                        var mtdata3 = [
+                            {group: "State reported", value: 4848597},
+                            {group: "Satellite recorded", value: 5345558.63},
+                        ];
+
+                        var mtdata4 = [
+                            {group: "State reported", value: 3992885},
+                            {group: "Satellite recorded", value: 4167978.25},
+                        ];
+                        var mtdata5 = [
+                            {group: "State reported", value: 5212740},
+                            {group: "Satellite recorded", value: 5730058.93},
+                        ];
+                        var mtdata6 = [
+                            {group: "State reported", value: 5422500},
+                            {group: "Satellite recorded", value: 3499417.36},
+                        ];
+                        var mtdata7 = [
+                            {group: "State reported", value: 6032575},
+                            {group: "Satellite recorded", value: 3663720.94},
+                        ];
+                        var mtdata8 = [
+                            {group: "State reported", value: 5123582},
+                            {group: "Satellite recorded", value: 1996371.19},
+                        ];
+                        var mtdata9 = [
+                            {group: "State reported", value: 4442725},
+                            {group: "Satellite recorded", value: 1080539.73},
+                        ];
+
+                        // set the dimensions and margins of the graph
+                        var margin = {top: 30, right: 30, bottom: 70, left: 95},
+                            width = 340 - margin.left - margin.right,
+                            height = 400 - margin.top - margin.bottom;
+
+                        // append the svg object to the body of the page
+                        let mtsvg = d3.select("#Montana-data-viz")
+                            .append("svg")
+                            .attr("width", width + margin.left + margin.right)
+                            .attr("height", height + margin.top + margin.bottom)
+                            .append("g")
+                            .attr("transform",
+                                "translate(" + margin.left + "," + margin.top + ")");
+
+                        // X axis
+                        var mtx = d3.scaleBand()
+                            .range([ 0, width ])
+                            .domain(mtdata1.map(function(d) { return d.group; }))
+                            .padding(0.2);
+                        mtsvg.append("g")
+                            .attr("transform", "translate(0," + height + ")")
+                            .attr("class", "x-axis")
+                            .call(d3.axisBottom(mtx))
+
+                        // Add Y axis
+                        var mty = d3.scaleLinear()
+                            .domain([0, 7000000])
+                            .range([ height, 0]);
+                        mtsvg.append("g")
+                            .attr("class", "y-axis")
+                            .call(d3.axisLeft(mty));
+
+                        //Y label
+                        mtsvg.append("text")
+                            .attr("class", "y label")
+                            .attr("text-anchor", "end")
+                            .attr("y", 6)
+                            .attr("dy", "-6.5em")
+                            .attr("dx", "-5em")
+                            .attr("transform", "rotate(-90)")
+                            .text("Thousand cubic feet");
+
+                        // coloring time!
+
+                        var t = d3.selectAll("text")
+                            .attr("fill", "#191919")
+
+                        var l = d3.selectAll("line")
+                            .attr("stroke", "#191919");
+
+                        var p = mtsvg.selectAll("path")
+                            .attr("opacity", "0");
+
+
+                        // A function that create / update the plot for a given variable:
+                        function mtupdate(mtdata) {
+
+                            let mtu = mtsvg.selectAll("rect")
+                                .data(mtdata)
+
+                            mtu
+                                .enter()
+                                .append("rect")
+                                .merge(mtu)
+                                .transition()
+                                .duration(1000)
+                                .attr("x", function(d) { return mtx(d.group); })
+                                .attr("y", function(d) { return mty(d.value); })
+                                .attr("width", mtx.bandwidth())
+                                .attr("height", function(d) { return height - mty(d.value); })
+                                .attr("class", function(d) { return d.group; })
+                                .attr("id", "mtrect")
+
+                        }
+
+                        // Initialize the plot with the first dataset
+                        mtupdate(mtdata1)
+
+                    </script>
+                </div>
+            </div>
+            <hr class="hwrd-pg-brake">
+            <p>
+                The oil and gas industry in Louisiana is integral to the state's economy, providing about $59 billion to the state's gross domestic product in 2019, according to a report commissioned by the American Petroleum Institute. The state accounts for roughly 1% of total U.S. oil reserves and production and 9% of marketed U.S. natural gas production.            </p>
+            <p>
+                Flaring and venting in the state are regulated by two state agencies. The Louisiana Department of Environmental Quality issues air quality permits and the Louisiana Department of Natural Resources oversees the development and conservation of natural resources, such as oil and gas.
+            </p>
+            <p>
+                The state allows companies to report their flared and vented gas as a combined volume, making it impossible to check against volumes recorded by satellite, which measures only flared gas.
+            </p>
+            <p>
+                Additionally, the state data itself is not audited or verified in any meaningful way, so its accuracy is in question, according to Patrick Courreges, communications director for the Department of Natural Resources. “We're not confident in those numbers … you can't be trusting any number you can't find a way to audit,” he said.  “We don't have the capacity to double-check it.”            </p>
+            <p>
+                The Natural Resources department enforces state regulations that prohibit venting unless a company is experiencing economic hardship. Companies must apply for such a hardship exemption, which state statute does not clearly define, and must prove that it will cost them more to bring the gas to market than they would make selling it. This exemption must be granted before venting can occur, except in unavoidable or emergency situations.            </p>
+            <p>
+                When an operator needs to flare or vent, the Department of Environmental Quality requires it to apply for a permit. Each permit applies to one event restricted to 10 production days. The permit notification includes estimated flaring and venting volumes, a reason for the release, emissions released from the activity and an expected duration. There is no upper limit on the amount a company can flare as long as it does not operate a source that emits 10 tons or more of toxic pollutants yearly, and venting is limited to 2.5 million cubic feet per event.
+            </p>
+            <p>
+                Louisiana’s Department of Natural Resources collects oil well data through monthly disposition reports that include flaring and venting volumes, but there is no way for the department to effectively audit its data beyond checking it against reported numbers from oil and gas transporters and processing facilities, according to Courreges.             </p>
+            <p>
+                The state’s environmental Surveillance Division conducts inspections at oil and gas production sites, but the frequency varies. Inspections are determined by a facility’s compliance history, location, operational practices and environmental or health impact. The Surveillance Division also does inspections after emergencies.
+            </p>
+            <p>
+                Every three to five years, the Office of Conservation at the Department of Natural Resources inspects producing wells for any maintenance issues like spills or leaks. When companies violate Louisiana state regulations, the appropriate department will issue a compliance order depending on the nature of the violation and may issue fines. Fees are determined by the state’s civil penalty matrix or are addressed on a case-by-case basis if the matrix does not describe a penalty for the violation. For example, the matrix defines the penalty for filing false reports or entries as $500 per report. If the operator challenges the violation, the fine is handled in civil court.
+            </p>
+            <!--authors-->
+            <p style="padding-bottom: 55px; font-size: 18px; text-align: right;" class="best-friend">
+                –Kenny Quayle and Rachel Stapholz
+            </p>
+        </div>
+    </div>
