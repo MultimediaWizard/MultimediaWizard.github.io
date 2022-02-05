@@ -1,9 +1,9 @@
-    <div class="glancebox mt-glancebox" id="mt">
+    <div class="glancebox wv-glancebox" id="wv">
         <div class="item-display">
             <div class="display-name-box">
-                <p class="display-name">Montana</p>
+                <p class="display-name">West Virgina</p>
             </div>
-            <svg id="mt-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
+            <svg id="wv-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
 
                 <g>
                     <path d="M3 25L14.2157 13.7843L25 3" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
@@ -26,7 +26,7 @@
                         <p style="margin-top: 10px">From 2012 to 2020,</p>
                         <div style="width: fit-content">
                             <!--!!!!VIIRS REPORTS!!!!-->
-                            <p class="hwrd-big-number">34,118,307,120</p>
+                            <p class="hwrd-big-number">1,241,710,107,990</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
                         <p>of flared gas was detected by the VIIRS satellite.</p>
@@ -36,7 +36,7 @@
                         <p>During the same period,</p>
                         <div style="width: fit-content">
                             <!--!!!!PROD REPORTS!!!!-->
-                            <p class="hwrd-big-number">45,068,737,000</p>
+                            <p class="hwrd-big-number">991,443,446,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
                         <p>of flared and vented gas was reported by companies in production reports.</p>
@@ -44,8 +44,12 @@
                     <!--STATE OVERSIGHT-->
                     <div>
                         <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
-                        <p style="padding-bottom: 6px">Montana Department of Natural Resources (Office of Conservation, Geological Oil and Gas Division) </p>
-                        <p>Montana Department of Environmental Quality (Office of Environmental Services)</p>
+                        <p style="padding-bottom: 6px">
+                            North Dakota Industrial Commission (Department of Mineral Resources, Oil and Gas Division)
+                        </p>
+                        <p>
+                            North Dakota Department of Environmental Quality
+                        </p>
                     </div>
                 </div>
                 <!--Graph column-->
@@ -83,60 +87,60 @@
 
                     </style>
                     <!-- Create a div where the graph will take place -->
-                    <div id="Montana-data-viz"></div>
+                    <div id="West-Virgina-data-viz"></div>
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
                         <!-- Add 2 buttons -->
-                        <button onclick="mtupdate(mtdata1)" class="data-viz-button">2012</button>
-                        <button onclick="mtupdate(mtdata2)" class="data-viz-button">2013</button>
-                        <button onclick="mtupdate(mtdata3)" class="data-viz-button">2014</button>
-                        <button onclick="mtupdate(mtdata4)" class="data-viz-button">2015</button>
-                        <button onclick="mtupdate(mtdata5)" class="data-viz-button">2016</button>
-                        <button onclick="mtupdate(mtdata6)" class="data-viz-button">2017</button>
-                        <button onclick="mtupdate(mtdata7)" class="data-viz-button">2018</button>
-                        <button onclick="mtupdate(mtdata8)" class="data-viz-button">2019</button>
-                        <button onclick="mtupdate(mtdata9)" class="data-viz-button">2020</button>
+                        <button onclick="wvupdate(wvdata1)" class="data-viz-button">2012</button>
+                        <button onclick="wvupdate(wvdata2)" class="data-viz-button">2013</button>
+                        <button onclick="wvupdate(wvdata3)" class="data-viz-button">2014</button>
+                        <button onclick="wvupdate(wvdata4)" class="data-viz-button">2015</button>
+                        <button onclick="wvupdate(wvdata5)" class="data-viz-button">2016</button>
+                        <button onclick="wvupdate(wvdata6)" class="data-viz-button">2017</button>
+                        <button onclick="wvupdate(wvdata7)" class="data-viz-button">2018</button>
+                        <button onclick="wvupdate(wvdata8)" class="data-viz-button">2019</button>
+                        <button onclick="wvupdate(wvdata9)" class="data-viz-button">2020</button>
                     </div>
                     <script>
 
                         // create data_set, these are put to BCM
-                        var mtdata1 = [
-                            {group: "State reported", value: 5044037},
-                            {group: "Satellite recorded", value: 4821200.28},
+                        var wvdata1 = [
+                            {group: "State reported", value: 83765780},
+                            {group: "Satellite recorded", value: 142189211.48},
                         ];
 
-                        var mtdata2 = [
-                            {group: "State reported", value: 4949096},
-                            {group: "Satellite recorded", value: 3813461.81},
+                        var wvdata2 = [
+                            {group: "State reported", value: 107257153},
+                            {group: "Satellite recorded", value: 111393935.98},
                         ];
 
-                        var mtdata3 = [
-                            {group: "State reported", value: 4848597},
-                            {group: "Satellite recorded", value: 5345558.63},
+                        var wvdata3 = [
+                            {group: "State reported", value: 130075509},
+                            {group: "Satellite recorded", value: 136821095.21},
                         ];
 
-                        var mtdata4 = [
-                            {group: "State reported", value: 3992885},
-                            {group: "Satellite recorded", value: 4167978.25},
+                        var wvdata4 = [
+                            {group: "State reported", value: 102407399},
+                            {group: "Satellite recorded", value: 125079141.97},
                         ];
-                        var mtdata5 = [
-                            {group: "State reported", value: 5212740},
-                            {group: "Satellite recorded", value: 5730058.93},
+                        var wvdata5 = [
+                            {group: "State reported", value: 66023558},
+                            {group: "Satellite recorded", value: 79813748.91},
                         ];
-                        var mtdata6 = [
-                            {group: "State reported", value: 5422500},
-                            {group: "Satellite recorded", value: 3499417.36},
+                        var wvdata6 = [
+                            {group: "State reported", value: 80023188},
+                            {group: "Satellite recorded", value: 113975726.07},
                         ];
-                        var mtdata7 = [
-                            {group: "State reported", value: 6032575},
-                            {group: "Satellite recorded", value: 3663720.94},
+                        var wvdata7 = [
+                            {group: "State reported", value: 135397352},
+                            {group: "Satellite recorded", value: 182780860.62},
                         ];
-                        var mtdata8 = [
-                            {group: "State reported", value: 5123582},
-                            {group: "Satellite recorded", value: 1996371.19},
+                        var wvdata8 = [
+                            {group: "State reported", value: 192368229},
+                            {group: "Satellite recorded", value: 215186632.42},
                         ];
-                        var mtdata9 = [
-                            {group: "State reported", value: 4442725},
-                            {group: "Satellite recorded", value: 1080539.73},
+                        var wvdata9 = [
+                            {group: "State reported", value: 94125278},
+                            {group: "Satellite recorded", value: 134469755.335},
                         ];
 
                         // set the dimensions and margins of the graph
@@ -145,7 +149,7 @@
                             height = 400 - margin.top - margin.bottom;
 
                         // append the svg object to the body of the page
-                        let mtsvg = d3.select("#Montana-data-viz")
+                        let wvsvg = d3.select("#West-Virgina-data-viz")
                             .append("svg")
                             .attr("width", width + margin.left + margin.right)
                             .attr("height", height + margin.top + margin.bottom)
@@ -154,25 +158,25 @@
                                 "translate(" + margin.left + "," + margin.top + ")");
 
                         // X axis
-                        var mtx = d3.scaleBand()
+                        var wvx = d3.scaleBand()
                             .range([ 0, width ])
-                            .domain(mtdata1.map(function(d) { return d.group; }))
+                            .domain(wvdata1.map(function(d) { return d.group; }))
                             .padding(0.2);
-                        mtsvg.append("g")
+                        wvsvg.append("g")
                             .attr("transform", "translate(0," + height + ")")
                             .attr("class", "x-axis")
-                            .call(d3.axisBottom(mtx))
+                            .call(d3.axisBottom(wvx))
 
                         // Add Y axis
-                        var mty = d3.scaleLinear()
-                            .domain([0, 7000000])
+                        var wvy = d3.scaleLinear()
+                            .domain([0, 230000000])
                             .range([ height, 0]);
-                        mtsvg.append("g")
+                        wvsvg.append("g")
                             .attr("class", "y-axis")
-                            .call(d3.axisLeft(mty));
+                            .call(d3.axisLeft(wvy));
 
                         //Y label
-                        mtsvg.append("text")
+                        wvsvg.append("text")
                             .attr("class", "y label")
                             .attr("text-anchor", "end")
                             .attr("y", 6)
@@ -189,64 +193,66 @@
                         var l = d3.selectAll("line")
                             .attr("stroke", "#191919");
 
-                        var p = mtsvg.selectAll("path")
+                        var p = wvsvg.selectAll("path")
                             .attr("opacity", "0");
 
 
                         // A function that create / update the plot for a given variable:
-                        function mtupdate(mtdata) {
+                        function wvupdate(wvdata) {
 
-                            let mtu = mtsvg.selectAll("rect")
-                                .data(mtdata)
+                            let wvu = wvsvg.selectAll("rect")
+                                .data(wvdata)
 
-                            mtu
+                            wvu
                                 .enter()
                                 .append("rect")
-                                .merge(mtu)
+                                .merge(wvu)
                                 .transition()
                                 .duration(1000)
-                                .attr("x", function(d) { return mtx(d.group); })
-                                .attr("y", function(d) { return mty(d.value); })
-                                .attr("width", mtx.bandwidth())
-                                .attr("height", function(d) { return height - mty(d.value); })
+                                .attr("x", function(d) { return wvx(d.group); })
+                                .attr("y", function(d) { return wvy(d.value); })
+                                .attr("width", wvx.bandwidth())
+                                .attr("height", function(d) { return height - wvy(d.value); })
                                 .attr("class", function(d) { return d.group; })
-                                .attr("id", "mtrect")
+                                .attr("id", "wvrect")
 
                         }
 
                         // Initialize the plot with the first dataset
-                        mtupdate(mtdata1)
+                        wvupdate(wvdata1)
 
                     </script>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
             <p>
-                The oil and gas industry in Louisiana is integral to the state's economy, providing about $59 billion to the state's gross domestic product in 2019, according to a report commissioned by the American Petroleum Institute. The state accounts for roughly 1% of total U.S. oil reserves and production and 9% of marketed U.S. natural gas production.            </p>
-            <p>
-                Flaring and venting in the state are regulated by two state agencies. The Louisiana Department of Environmental Quality issues air quality permits and the Louisiana Department of Natural Resources oversees the development and conservation of natural resources, such as oil and gas.
+                North Dakota ranks third in crude oil production as of August 2021, according to the U.S. Energy Information Administration. It produced more than 438 million barrels of oil in 2020 and reported flaring more than 991 billion cubic feet of natural gas, according to state records.
             </p>
             <p>
-                The state allows companies to report their flared and vented gas as a combined volume, making it impossible to check against volumes recorded by satellite, which measures only flared gas.
+                Oil and natural gas resources in the state are linked to the Bakken Formation, which stretches through western North Dakota into Canada and Montana. Production in the Bakken boomed starting around 2008 as horizontal drilling and hydraulic fracturing made it possible to access oil and gas trapped in the shale formation. As production ramped up, natural gas infrastructure lagged behind, according to North Dakota Department of Mineral Resources Director Lynn Helms. With limited options for moving natural gas to market, the practice of flaring in the Bakken skyrocketed.
             </p>
             <p>
-                Additionally, the state data itself is not audited or verified in any meaningful way, so its accuracy is in question, according to Patrick Courreges, communications director for the Department of Natural Resources. “We're not confident in those numbers … you can't be trusting any number you can't find a way to audit,” he said.  “We don't have the capacity to double-check it.”            </p>
+                Oil and gas producers release natural gas through flaring or venting — activities that push harmful chemicals into the atmosphere. Venting, or directly releasing methane and other gases into the air, is permissible in North Dakota only in emergency situations or for maintenance, according to the Department of Environmental Quality.
             <p>
-                The Natural Resources department enforces state regulations that prohibit venting unless a company is experiencing economic hardship. Companies must apply for such a hardship exemption, which state statute does not clearly define, and must prove that it will cost them more to bring the gas to market than they would make selling it. This exemption must be granted before venting can occur, except in unavoidable or emergency situations.            </p>
+                Satellite data recorded more than 1.2 trillion cubic feet of gas flared in North Dakota from 2012-2020, a Howard Center analysis found, compared to the 991 billion cubic feet producers reported to the state.
             <p>
-                When an operator needs to flare or vent, the Department of Environmental Quality requires it to apply for a permit. Each permit applies to one event restricted to 10 production days. The permit notification includes estimated flaring and venting volumes, a reason for the release, emissions released from the activity and an expected duration. There is no upper limit on the amount a company can flare as long as it does not operate a source that emits 10 tons or more of toxic pollutants yearly, and venting is limited to 2.5 million cubic feet per event.
+                State-reported flaring totals do not include figures from “confidential wells,” a designation used when a company asks for production information to be temporarily kept confidential. As of September 2021, 7.5% of wells in the state were granted this status by the Department of Mineral Resources. The department, which collects data on flaring, falls under the North Dakota Industrial Commission, which oversees state regulations for the oil and gas industry.
             </p>
             <p>
-                Louisiana’s Department of Natural Resources collects oil well data through monthly disposition reports that include flaring and venting volumes, but there is no way for the department to effectively audit its data beyond checking it against reported numbers from oil and gas transporters and processing facilities, according to Courreges.             </p>
-            <p>
-                The state’s environmental Surveillance Division conducts inspections at oil and gas production sites, but the frequency varies. Inspections are determined by a facility’s compliance history, location, operational practices and environmental or health impact. The Surveillance Division also does inspections after emergencies.
+                Oil well producers are allowed to flare for one year after the well’s first production date, with no limit on the volume of gas burned. After that period, producers who can prove that connecting to gas gathering infrastructure would be too costly may be granted an exemption to flare. This calculation is made in accordance with state law by adding “the cost of connecting the well” to the cost of operating the connection facility, plus an additional 10% for other overhead costs.
             </p>
             <p>
-                Every three to five years, the Office of Conservation at the Department of Natural Resources inspects producing wells for any maintenance issues like spills or leaks. When companies violate Louisiana state regulations, the appropriate department will issue a compliance order depending on the nature of the violation and may issue fines. Fees are determined by the state’s civil penalty matrix or are addressed on a case-by-case basis if the matrix does not describe a penalty for the violation. For example, the matrix defines the penalty for filing false reports or entries as $500 per report. If the operator challenges the violation, the fine is handled in civil court.
+                In an effort to curtail flaring, the North Dakota Industrial Commission implemented a gas capture policy in 2014, requiring companies to use or sell most of the gas they produce. The policy set goals that would incrementally lower the percentage of gas flared to 9% of all gas associated with production by November 2020.
+           </p>
+            <p>
+                sdfadsfsa
+            </p>
+            <p>
+                While the Department of Mineral Resources is concerned with preventing the waste of natural resources, the North Dakota Department of Environmental Quality oversees air emissions from flaring and venting. The agency also enforces regulations on flare efficiency, which determines the amount of methane and other chemicals released into the atmosphere.
             </p>
             <!--authors-->
             <p style="padding-bottom: 55px; font-size: 18px; text-align: right;" class="best-friend">
-                –Kenny Quayle and Rachel Stapholz
+                – Maya Leachman, Andrew Onodera and Isaac Stone Simonelli
             </p>
         </div>
     </div>
