@@ -6,7 +6,6 @@ Site -> Zach Van Arsdale
 
 /* to speed some things up I use a shorthand CSS framework by bansel.io */
 
-/*@import "shorthand.css";*/
 @import url("https://use.typekit.net/axt1xqw.css");
 
 /*Creating some shorthand*/
@@ -250,6 +249,7 @@ img, video {
     font-size: 20px;
     line-height: 24px;
 }
+
 
 .glancebox {
     /* Howard Popup blue grey */
