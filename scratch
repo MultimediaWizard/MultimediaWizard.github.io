@@ -1,9 +1,9 @@
-    <div class="glancebox wv-glancebox" id="wv">
+    <div class="glancebox wy-glancebox" id="wy">
         <div class="item-display">
             <div class="display-name-box">
-                <p class="display-name">West Virgina</p>
+                <p class="display-name">Wyoming</p>
             </div>
-            <svg id="wv-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
+            <svg id="wy-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
 
                 <g>
                     <path d="M3 25L14.2157 13.7843L25 3" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
@@ -87,58 +87,58 @@
 
                     </style>
                     <!-- Create a div where the graph will take place -->
-                    <div id="West-Virgina-data-viz"></div>
+                    <div id="Wyoming-data-viz"></div>
                     <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
                         <!-- Add 2 buttons -->
-                        <button onclick="wvupdate(wvdata1)" class="data-viz-button">2012</button>
-                        <button onclick="wvupdate(wvdata2)" class="data-viz-button">2013</button>
-                        <button onclick="wvupdate(wvdata3)" class="data-viz-button">2014</button>
-                        <button onclick="wvupdate(wvdata4)" class="data-viz-button">2015</button>
-                        <button onclick="wvupdate(wvdata5)" class="data-viz-button">2016</button>
-                        <button onclick="wvupdate(wvdata6)" class="data-viz-button">2017</button>
-                        <button onclick="wvupdate(wvdata7)" class="data-viz-button">2018</button>
-                        <button onclick="wvupdate(wvdata8)" class="data-viz-button">2019</button>
-                        <button onclick="wvupdate(wvdata9)" class="data-viz-button">2020</button>
+                        <button onclick="wyupdate(wydata1)" class="data-viz-button">2012</button>
+                        <button onclick="wyupdate(wydata2)" class="data-viz-button">2013</button>
+                        <button onclick="wyupdate(wydata3)" class="data-viz-button">2014</button>
+                        <button onclick="wyupdate(wydata4)" class="data-viz-button">2015</button>
+                        <button onclick="wyupdate(wydata5)" class="data-viz-button">2016</button>
+                        <button onclick="wyupdate(wydata6)" class="data-viz-button">2017</button>
+                        <button onclick="wyupdate(wydata7)" class="data-viz-button">2018</button>
+                        <button onclick="wyupdate(wydata8)" class="data-viz-button">2019</button>
+                        <button onclick="wyupdate(wydata9)" class="data-viz-button">2020</button>
                     </div>
                     <script>
 
                         // create data_set, these are put to BCM
-                        var wvdata1 = [
+                        var wydata1 = [
                             {group: "State reported", value: 83765780},
                             {group: "Satellite recorded", value: 142189211.48},
                         ];
 
-                        var wvdata2 = [
+                        var wydata2 = [
                             {group: "State reported", value: 107257153},
                             {group: "Satellite recorded", value: 111393935.98},
                         ];
 
-                        var wvdata3 = [
+                        var wydata3 = [
                             {group: "State reported", value: 130075509},
                             {group: "Satellite recorded", value: 136821095.21},
                         ];
 
-                        var wvdata4 = [
+                        var wydata4 = [
                             {group: "State reported", value: 102407399},
                             {group: "Satellite recorded", value: 125079141.97},
                         ];
-                        var wvdata5 = [
+                        var wydata5 = [
                             {group: "State reported", value: 66023558},
                             {group: "Satellite recorded", value: 79813748.91},
                         ];
-                        var wvdata6 = [
+                        var wydata6 = [
                             {group: "State reported", value: 80023188},
                             {group: "Satellite recorded", value: 113975726.07},
                         ];
-                        var wvdata7 = [
+                        var wydata7 = [
                             {group: "State reported", value: 135397352},
                             {group: "Satellite recorded", value: 182780860.62},
                         ];
-                        var wvdata8 = [
+                        var wydata8 = [
                             {group: "State reported", value: 192368229},
                             {group: "Satellite recorded", value: 215186632.42},
                         ];
-                        var wvdata9 = [
+                        var wydata9 = [
                             {group: "State reported", value: 94125278},
                             {group: "Satellite recorded", value: 134469755.335},
                         ];
@@ -149,7 +149,7 @@
                             height = 400 - margin.top - margin.bottom;
 
                         // append the svg object to the body of the page
-                        let wvsvg = d3.select("#West-Virgina-data-viz")
+                        let wysvg = d3.select("#Wyoming-data-viz")
                             .append("svg")
                             .attr("width", width + margin.left + margin.right)
                             .attr("height", height + margin.top + margin.bottom)
@@ -158,25 +158,25 @@
                                 "translate(" + margin.left + "," + margin.top + ")");
 
                         // X axis
-                        var wvx = d3.scaleBand()
+                        var wyx = d3.scaleBand()
                             .range([ 0, width ])
-                            .domain(wvdata1.map(function(d) { return d.group; }))
+                            .domain(wydata1.map(function(d) { return d.group; }))
                             .padding(0.2);
-                        wvsvg.append("g")
+                        wysvg.append("g")
                             .attr("transform", "translate(0," + height + ")")
                             .attr("class", "x-axis")
-                            .call(d3.axisBottom(wvx))
+                            .call(d3.axisBottom(wyx))
 
                         // Add Y axis
-                        var wvy = d3.scaleLinear()
+                        var wyy = d3.scaleLinear()
                             .domain([0, 230000000])
                             .range([ height, 0]);
-                        wvsvg.append("g")
+                        wysvg.append("g")
                             .attr("class", "y-axis")
-                            .call(d3.axisLeft(wvy));
+                            .call(d3.axisLeft(wyy));
 
                         //Y label
-                        wvsvg.append("text")
+                        wysvg.append("text")
                             .attr("class", "y label")
                             .attr("text-anchor", "end")
                             .attr("y", 6)
@@ -193,33 +193,33 @@
                         var l = d3.selectAll("line")
                             .attr("stroke", "#191919");
 
-                        var p = wvsvg.selectAll("path")
+                        var p = wysvg.selectAll("path")
                             .attr("opacity", "0");
 
 
                         // A function that create / update the plot for a given variable:
-                        function wvupdate(wvdata) {
+                        function wyupdate(wydata) {
 
-                            let wvu = wvsvg.selectAll("rect")
-                                .data(wvdata)
+                            let wyu = wysvg.selectAll("rect")
+                                .data(wydata)
 
-                            wvu
+                            wyu
                                 .enter()
                                 .append("rect")
-                                .merge(wvu)
+                                .merge(wyu)
                                 .transition()
                                 .duration(1000)
-                                .attr("x", function(d) { return wvx(d.group); })
-                                .attr("y", function(d) { return wvy(d.value); })
-                                .attr("width", wvx.bandwidth())
-                                .attr("height", function(d) { return height - wvy(d.value); })
+                                .attr("x", function(d) { return wyx(d.group); })
+                                .attr("y", function(d) { return wyy(d.value); })
+                                .attr("width", wyx.bandwidth())
+                                .attr("height", function(d) { return height - wyy(d.value); })
                                 .attr("class", function(d) { return d.group; })
-                                .attr("id", "wvrect")
+                                .attr("id", "wyrect")
 
                         }
 
                         // Initialize the plot with the first dataset
-                        wvupdate(wvdata1)
+                        wyupdate(wydata1)
 
                     </script>
                 </div>
@@ -233,8 +233,10 @@
             </p>
             <p>
                 Oil and gas producers release natural gas through flaring or venting — activities that push harmful chemicals into the atmosphere. Venting, or directly releasing methane and other gases into the air, is permissible in North Dakota only in emergency situations or for maintenance, according to the Department of Environmental Quality.
+            </p>
             <p>
                 Satellite data recorded more than 1.2 trillion cubic feet of gas flared in North Dakota from 2012-2020, a Howard Center analysis found, compared to the 991 billion cubic feet producers reported to the state.
+            </p>
             <p>
                 State-reported flaring totals do not include figures from “confidential wells,” a designation used when a company asks for production information to be temporarily kept confidential. As of September 2021, 7.5% of wells in the state were granted this status by the Department of Mineral Resources. The department, which collects data on flaring, falls under the North Dakota Industrial Commission, which oversees state regulations for the oil and gas industry.
             </p>

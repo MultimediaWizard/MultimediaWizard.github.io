@@ -117,6 +117,9 @@
         </svg>
       </article>
 <!--glancebox start-->
+
+
+
 <!--Alaska-->
     <div class="glancebox ak-glancebox" id="ak">
             <div class="item-display">
@@ -204,7 +207,7 @@
                         </style>
                         <!-- Create a div where the graph will take place -->
                         <div id="alaska-data-viz"></div>
-                        <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                        <div class="graph-button">
                             <!-- Add 2 buttons -->
                             <button onclick="akupdate(akdata1)" class="data-viz-button">2012</button>
                             <button onclick="akupdate(akdata2)" class="data-viz-button">2013</button>
@@ -338,6 +341,7 @@
                             akupdate(akdata1)
 
                         </script>
+                        <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                     </div>
                 </div>
                 <hr class="hwrd-pg-brake">
@@ -464,7 +468,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="colorado-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="coupdate(data1)" class="data-viz-button">2012</button>
                         <button onclick="coupdate(data2)" class="data-viz-button">2013</button>
@@ -597,6 +601,7 @@
                         coupdate(data1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -604,21 +609,29 @@
                 Colorado has among the most stringent oil and gas regulations of any U.S. state and bans routine flaring and venting. Operators must file monthly reports detailing oil and gas production, including an estimation of gas flared and vented.
             </p>
             <p>
-                Colorado has operators report flared and vented gas as a combined volume, making it impossible to directly compare to satellite data, which measures only flaring volumes. It also requires flares to be enclosed. Enclosed flares give off less heat radiation, which satellites measure to estimate the volume of flared gas.            </p>
+                Colorado has operators report flared and vented gas as a combined volume, making it impossible to directly compare to satellite data, which measures only flaring volumes. It also requires flares to be enclosed. Enclosed flares give off less heat radiation, which satellites measure to estimate the volume of flared gas.
+            </p>
             <p>
-                In April 2019, the state updated the Colorado Oil and Gas Conservation Act, requiring the Oil and Gas Conservation Commission to regulate the industry with an aim of protecting human health and the environment and less focus on fostering development. The Air Quality Control Commission, part of the Colorado Department of Public Health and Environment, gained the ability to regulate air emissions from oil and gas operations.            </p>
+                In April 2019, the state updated the Colorado Oil and Gas Conservation Act, requiring the Oil and Gas Conservation Commission to regulate the industry with an aim of protecting human health and the environment and less focus on fostering development. The Air Quality Control Commission, part of the Colorado Department of Public Health and Environment, gained the ability to regulate air emissions from oil and gas operations.
+            </p>
             <p>
-                The law also empowered local governments to regulate drilling within their boundaries — in some cases, more strictly than the state. Operators now need local approval before bringing a permit application to the state.            </p>
+                The law also empowered local governments to regulate drilling within their boundaries — in some cases, more strictly than the state. Operators now need local approval before bringing a permit application to the state.
+            </p>
             <p>
-                Colorado has a winding network of pipelines used to capture and send natural gas to market. Operators generally cannot flare or vent gas except under certain circumstances like maintenance, testing and ensuring safety during malfunctions.            </p>
+                Colorado has a winding network of pipelines used to capture and send natural gas to market. Operators generally cannot flare or vent gas except under certain circumstances like maintenance, testing and ensuring safety during malfunctions.
+            </p>
             <p>
-                The Colorado Oil and Gas Conservation Commission inspects active wells about every 2 ½ years and follows up if they discover violations. According to the commission, inspectors check for flaring or venting with optical gas imaging cameras and natural gas detectors, but do not confirm flare efficiency, instead checking for signs of an inefficient flare and referring the well to the Department of Public Health and Environment.            </p>
+                The Colorado Oil and Gas Conservation Commission inspects active wells about every 2 ½ years and follows up if they discover violations. According to the commission, inspectors check for flaring or venting with optical gas imaging cameras and natural gas detectors, but do not confirm flare efficiency, instead checking for signs of an inefficient flare and referring the well to the Department of Public Health and Environment.
+            </p>
             <p>
-                The Air Quality Control Commission checks to see how efficiently flares are burning and requires operators periodically to measure how effectively a flare removes methane and other pollutants during combustion.            </p>
+                The Air Quality Control Commission checks to see how efficiently flares are burning and requires operators periodically to measure how effectively a flare removes methane and other pollutants during combustion.
+            </p>
             <p>
-                Since June 2021, the commission has required oil and gas operators with equipment upstream of a gas processing plant — including wells, pipelines, tanks and compressors — to report their actual emissions annually, including methane emissions from venting.            </p>
+                Since June 2021, the commission has required oil and gas operators with equipment upstream of a gas processing plant — including wells, pipelines, tanks and compressors — to report their actual emissions annually, including methane emissions from venting.
+            </p>
             <p>
-                Also, operators under state jurisdiction must file monthly reports with measurements of how much natural gas they’ve flared or vented per well in one combined total. The operator can choose between reporting a direct measurement or an estimate.            </p>
+                Also, operators under state jurisdiction must file monthly reports with measurements of how much natural gas they’ve flared or vented per well in one combined total. The operator can choose between reporting a direct measurement or an estimate.
+            </p>
             <p>
                 If operators want to flare during production, they need a detailed gas capture plan, pledging to either connect their facility to a gas line or use the natural gas on-site. The commission must approve this plan before granting a request to vent or flare. If the operator doesn’t follow through, the commission director can shut down the well.
             </p>
@@ -711,7 +724,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="Kansas-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="ksupdate(ksdata1)" class="data-viz-button">2012</button>
                         <button onclick="ksupdate(ksdata2)" class="data-viz-button">2013</button>
@@ -836,11 +849,13 @@
                         ksupdate(ksdata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
             <p>
-                In 1947, Kansas was the site of the nation’s first experimental hydraulic fracturing operation. Fracking, as the technology is now commonly known, became a driver of the oil and gas industry in the late 20th century, and by 2015, accounted for 51% of the national crude oil production. Kansas accounted for about 1% of total U.S. oil production in 2020.            </p>
+                In 1947, Kansas was the site of the nation’s first experimental hydraulic fracturing operation. Fracking, as the technology is now commonly known, became a driver of the oil and gas industry in the late 20th century, and by 2015, accounted for 51% of the national crude oil production. Kansas accounted for about 1% of total U.S. oil production in 2020.
+            </p>
             <p>
                 According to a 2019 Department of Energy report, Kansas ranks among the top 13 flaring states in the country. The Kansas Corporation Commission’s Conservation Division regulates oil and gas for the state. Although the commission published a set of rules for flaring and venting, it does not maintain records on these activities in any centralized database. Ryan Hoffman, director of the division, says flaring is rare. But the VIIRS satellite, which detects flaring through heat signatures, flaring volumes in Kansas increased consistently between 2012 and 2015 and saw a sharp decline between 2018 and 2020. Overall, the satellite detected more than 2 billion cubic feet of gas flared in the state between 2012 and 2020.
             </p>
@@ -848,9 +863,11 @@
                 Hoffman estimated the Kansas Corporation Commission currently oversees more than 100,000 wells. To flare for a period of  up to 30 days — consecutively or intermittently — operators on horizontal wells, associated with fracking, must file a form with the state within five days of beginning flaring. To flare for more than 30 days, they must submit an application for the commission’s consideration. Venting — the direct release of methane into the atmosphere — is prohibited on horizontal wells in the state.
             </p>
             <p>
-                According to Hoffman, permits to flare more than approved volumes are given based on operators proving the necessity to do so. The regulations require operators to prove that excessive flaring is “necessary to prevent waste and does not violate correlative rights.” “More often than not, they’re able to meet that burden,” said Hoffman.             </p>
+                According to Hoffman, permits to flare more than approved volumes are given based on operators proving the necessity to do so. The regulations require operators to prove that excessive flaring is “necessary to prevent waste and does not violate correlative rights.” “More often than not, they’re able to meet that burden,” said Hoffman.
+            </p>
             <p>
-                State regulations require oil and gas companies to maintain, monitor and record all flaring and venting activity for at least two years and report to the commission within five days of receiving any request for records. The division requested flaring and venting records from operators in 2012, but determined that volumes “tapered off” after that year and stopped tracking the data, according to an emailed response from the agency’s custodian of records.             </p>
+                State regulations require oil and gas companies to maintain, monitor and record all flaring and venting activity for at least two years and report to the commission within five days of receiving any request for records. The division requested flaring and venting records from operators in 2012, but determined that volumes “tapered off” after that year and stopped tracking the data, according to an emailed response from the agency’s custodian of records.
+            </p>
             <!--authors-->
             <p style="padding-bottom: 55px; font-size: 18px; text-align: right;" class="best-friend">
                 – Zoha Tunio and Kenny Quayle
@@ -944,7 +961,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="Louisiana-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="laupdate(ladata1)" class="data-viz-button">2012</button>
                         <button onclick="laupdate(ladata2)" class="data-viz-button">2013</button>
@@ -1078,11 +1095,13 @@
                         laupdate(ladata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
             <p>
-                The oil and gas industry in Louisiana is integral to the state's economy, providing about $59 billion to the state's gross domestic product in 2019, according to a report commissioned by the American Petroleum Institute. The state accounts for roughly 1% of total U.S. oil reserves and production and 9% of marketed U.S. natural gas production.            </p>
+                The oil and gas industry in Louisiana is integral to the state's economy, providing about $59 billion to the state's gross domestic product in 2019, according to a report commissioned by the American Petroleum Institute. The state accounts for roughly 1% of total U.S. oil reserves and production and 9% of marketed U.S. natural gas production.
+            </p>
             <p>
                 Flaring and venting in the state are regulated by two state agencies. The Louisiana Department of Environmental Quality issues air quality permits and the Louisiana Department of Natural Resources oversees the development and conservation of natural resources, such as oil and gas.
             </p>
@@ -1090,14 +1109,17 @@
                 The state allows companies to report their flared and vented gas as a combined volume, making it impossible to check against volumes recorded by satellite, which measures only flared gas.
             </p>
             <p>
-                Additionally, the state data itself is not audited or verified in any meaningful way, so its accuracy is in question, according to Patrick Courreges, communications director for the Department of Natural Resources. “We're not confident in those numbers … you can't be trusting any number you can't find a way to audit,” he said.  “We don't have the capacity to double-check it.”            </p>
+                Additionally, the state data itself is not audited or verified in any meaningful way, so its accuracy is in question, according to Patrick Courreges, communications director for the Department of Natural Resources. “We're not confident in those numbers … you can't be trusting any number you can't find a way to audit,” he said.  “We don't have the capacity to double-check it.”
+            </p>
             <p>
-                The Natural Resources department enforces state regulations that prohibit venting unless a company is experiencing economic hardship. Companies must apply for such a hardship exemption, which state statute does not clearly define, and must prove that it will cost them more to bring the gas to market than they would make selling it. This exemption must be granted before venting can occur, except in unavoidable or emergency situations.            </p>
+                The Natural Resources department enforces state regulations that prohibit venting unless a company is experiencing economic hardship. Companies must apply for such a hardship exemption, which state statute does not clearly define, and must prove that it will cost them more to bring the gas to market than they would make selling it. This exemption must be granted before venting can occur, except in unavoidable or emergency situations.
+            </p>
             <p>
                 When an operator needs to flare or vent, the Department of Environmental Quality requires it to apply for a permit. Each permit applies to one event restricted to 10 production days. The permit notification includes estimated flaring and venting volumes, a reason for the release, emissions released from the activity and an expected duration. There is no upper limit on the amount a company can flare as long as it does not operate a source that emits 10 tons or more of toxic pollutants yearly, and venting is limited to 2.5 million cubic feet per event.
             </p>
             <p>
-                Louisiana’s Department of Natural Resources collects oil well data through monthly disposition reports that include flaring and venting volumes, but there is no way for the department to effectively audit its data beyond checking it against reported numbers from oil and gas transporters and processing facilities, according to Courreges.             </p>
+                Louisiana’s Department of Natural Resources collects oil well data through monthly disposition reports that include flaring and venting volumes, but there is no way for the department to effectively audit its data beyond checking it against reported numbers from oil and gas transporters and processing facilities, according to Courreges.
+            </p>
             <p>
                 The state’s environmental Surveillance Division conducts inspections at oil and gas production sites, but the frequency varies. Inspections are determined by a facility’s compliance history, location, operational practices and environmental or health impact. The Surveillance Division also does inspections after emergencies.
             </p>
@@ -1197,7 +1219,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="Montana-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="mtupdate(mtdata1)" class="data-viz-button">2012</button>
                         <button onclick="mtupdate(mtdata2)" class="data-viz-button">2013</button>
@@ -1331,21 +1353,24 @@
                         mtupdate(mtdata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
             <p>
-                The northeast corner of Montana houses the Bakken Shale, one of the largest oil-producing plays in the country. Spurred by advancements in drilling technology led by horizontal drilling and hydraulic fracturing, oil production in this region boomed starting around 2008.            <p>
+                The northeast corner of Montana houses the Bakken Shale, one of the largest oil-producing plays in the country. Spurred by advancements in drilling technology led by horizontal drilling and hydraulic fracturing, oil production in this region boomed starting around 2008.
             </p>
             <p>
                 Although rich in fossil fuels, Montana ranks low among oil and gas-producing states, landing 12th in oil production and 20th in natural gas production, according to the Montana Petroleum Association, Inc.
             </p>
             <p>
-                Because drilling outpaced the development of pipeline infrastructure, companies released into the atmosphere natural gas that might have otherwise gone to market. From 2012 to 2020, Montana companies flared or vented nearly 41 billion cubic feet of gas, according to a Howard Center analysis of state data.            <p>
+                Because drilling outpaced the development of pipeline infrastructure, companies released into the atmosphere natural gas that might have otherwise gone to market. From 2012 to 2020, Montana companies flared or vented nearly 41 billion cubic feet of gas, according to a Howard Center analysis of state data.
+            </p>
             <p>
-                During this same time period, satellite observations recorded about 16.5 billion cubic feet of gas. Because companies in Montana report flared and vented gas as a combined volume, it is impossible to make any meaningful comparison with volumes recorded by satellite, which is able to detect only gas that is flared.  Venting, which does not combust the methane and instead releases it directly into the air, is also invisible to the naked eye.            </p>
+                During this same time period, satellite observations recorded about 16.5 billion cubic feet of gas. Because companies in Montana report flared and vented gas as a combined volume, it is impossible to make any meaningful comparison with volumes recorded by satellite, which is able to detect only gas that is flared.  Venting, which does not combust the methane and instead releases it directly into the air, is also invisible to the naked eye.
+            </p>
             <p>
-                The Montana Department of Environmental Quality sets state emission and flare efficiency standards, whereas the Montana Board of Oil and Gas Conservation regulates oil and gas production. Overseen by industry representatives and landowners, the board tracks and regulates flaring and venting by oil and gas producers.             <p>
+                The Montana Department of Environmental Quality sets state emission and flare efficiency standards, whereas the Montana Board of Oil and Gas Conservation regulates oil and gas production. Overseen by industry representatives and landowners, the board tracks and regulates flaring and venting by oil and gas producers.
             </p>
             <p>
                 The board limits flaring to 100,000 — and venting to 20,000 — cubic feet a day. With board authorization, however, companies may exceed these limits if they can show that capturing the gas is too costly. The Howard Center reviewed flaring exception requests from 2012 to June 2020 and found that no request was ever denied.
@@ -1456,7 +1481,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="New-Mexico-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="nmupdate(nmdata3)" class="data-viz-button">2014</button>
                         <button onclick="nmupdate(nmdata4)" class="data-viz-button">2015</button>
@@ -1579,6 +1604,7 @@
                         nmupdate(nmdata3)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -1590,13 +1616,16 @@
             </p>
             <p>
                 The Oil Conservation Division, the regulatory body that oversees oil and gas operations, voted in March 2021 to update state regulations around natural gas waste from the oil and gas industry. This included a ban on routine flaring and venting and a requirement that operators capture and use 98% of natural gas by the end of 2026.
+            </p>
             <p>
                 This followed the election of Gov. Michelle Lujan Grisham, who took office in 2019 — a peak year for flaring in New Mexico — and campaigned on a platform of strengthening environmental regulations. The San Juan Basin, a region in northwestern New Mexico, had previously made headlines when scientists found a plume of methane from oil and gas facilities over the area.
+            </p>
             <p>
                 During her first month in office, the governor issued an executive order setting goals to slash greenhouse gas emissions, including methane, by almost half over the next decade compared to 2005 levels. This order also established an interagency Climate Change Task Force.
             </p>
             <p>
-                The task force identified curbing methane emissions as New Mexico’s “highest priority” and pushed for tighter state regulations on the fossil fuel-guzzling oil and gas sector in their 2019 Climate Strategy report.              </p>
+                The task force identified curbing methane emissions as New Mexico’s “highest priority” and pushed for tighter state regulations on the fossil fuel-guzzling oil and gas sector in their 2019 Climate Strategy report.
+            </p>
             <p>
                 The state’s regulatory bodies also convened a methane advisory panel, which found inconsistencies in how operators defined flaring and venting, making state records inexact. Operators are required to report flaring and venting separately.
             </p>
@@ -1709,7 +1738,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="North-Dakota-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="ndupdate(nddata1)" class="data-viz-button">2012</button>
                         <button onclick="ndupdate(nddata2)" class="data-viz-button">2013</button>
@@ -1843,6 +1872,7 @@
                         ndupdate(nddata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -1854,8 +1884,10 @@
             </p>
             <p>
                 Oil and gas producers release natural gas through flaring or venting — activities that push harmful chemicals into the atmosphere. Venting, or directly releasing methane and other gases into the air, is permissible in North Dakota only in emergency situations or for maintenance, according to the Department of Environmental Quality.
+            </p>
             <p>
                 Satellite data recorded more than 1.2 trillion cubic feet of gas flared in North Dakota from 2012-2020, a Howard Center analysis found, compared to the 991 billion cubic feet producers reported to the state.
+            </p>
             <p>
                 State-reported flaring totals do not include figures from “confidential wells,” a designation used when a company asks for production information to be temporarily kept confidential. As of September 2021, 7.5% of wells in the state were granted this status by the Department of Mineral Resources. The department, which collects data on flaring, falls under the North Dakota Industrial Commission, which oversees state regulations for the oil and gas industry.
             </p>
@@ -1968,7 +2000,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="Oklahoma-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="okupdate(okdata1)" class="data-viz-button">2012</button>
                         <button onclick="okupdate(okdata2)" class="data-viz-button">2013</button>
@@ -2102,6 +2134,7 @@
                         okupdate(okdata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -2113,8 +2146,10 @@
             </p>
             <p>
                 The state’s Department of Environmental Quality administers two different types of permits to manage both major and minor sources of air pollution. A construction permit is required before a new source of emissions is built or modified. An operating permit is granted to an oil and gas company post-construction once the source has proved it will meet emissions limitations and air pollution-control requirements. Permit holders are required to keep records of volatile organic compounds released or stored on site as well as excess emissions measurements, and to meet flare efficiency standards.
+            </p>
             <p>
                 Oil and gas companies need approval from the Oklahoma Corporation Commission before flaring or venting. An operator must estimate the number of days it will flare or vent (reported as a combined number) and the volume of gas expected to be flared or vented per day. According to Matt Skinner, public information manager for the commission, the agency might deny an application if the operator has not demonstrated a need to flare or if there are no physical, legal or economic barriers to connecting to a pipeline.
+            </p>
             <p>
                 Companies are not required to report actual amounts of gas flared or vented, and the commission does not aggregate the requested totals. The Howard Center built a database to total Oklahoma flaring and venting estimated volumes by extracting data from more than 800 permits submitted to the commission between 2012 and 2020.
             </p>
@@ -2123,6 +2158,7 @@
             </p>
             <p>
                 According to state law, there are some exceptions that allow operators to flare or vent without a permit. For example, operators may flare or vent up to 50,000 cubic feet per day without a permit if getting the gas to market isn’t economically feasible as determined by the commission. Venting without a permit is also allowed for 72 hours if a company argues that it is essential to the well’s operation or an unexpected circumstance is encountered. However, if the content of the gas exceeds 100 parts per million of hydrogen sulfide, it must be flared.
+            </p>
             <p>
                 Operators venting or flaring due to new well completion or recompletion can receive a permit exemption for up to 21 days. An additional 45-day exemption is allowed for flaring if the average rate is 300,000 cubic feet a day in that time period, there is no nearby pipeline or the gas content has too much hydrogen sulfide.
             </p>
@@ -2223,7 +2259,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="Pennsylvania-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="paupdate(padata1)" class="data-viz-button">2012</button>
                         <button onclick="paupdate(padata2)" class="data-viz-button">2013</button>
@@ -2348,18 +2384,22 @@
                         paupdate(padata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
             <p>
-                Pennsylvania, which saw a boom in fracking around 2010, is primarily focused on natural gas production in the Marcellus Shale, located in the northern, western and central parts of the state. In 2020, the state produced more natural gas from unconventional wells in one year than ever before — 7.1 trillion cubic feet — making it the second-largest producer of gas in the country, behind Texas.             </p>
+                Pennsylvania, which saw a boom in fracking around 2010, is primarily focused on natural gas production in the Marcellus Shale, located in the northern, western and central parts of the state. In 2020, the state produced more natural gas from unconventional wells in one year than ever before — 7.1 trillion cubic feet — making it the second-largest producer of gas in the country, behind Texas.
+            </p>
             <p>
                 Pennsylvania does not track the volumes of natural gas flared and vented., Instead of taxing these volumes, it applies a fee to each well a company operates regardless of how much oil or gas it produces. The oil and gas industry has argued that Pennsylvania’s per-well fee is a better alternative because it doesn’t deter production.
             </p>
             <p>
                 The Pennsylvania Department of Environmental Protection’s Air Quality Program is primarily responsible for ensuring that methane and other emissions from oil wells meet the standards established through the Clean Air Act and Pennsylvania’s Air Pollution Control Act.
+            </p>
             <p>
                 In 2017, the state implemented a new system to streamline and improve the transparency of its emissions data, according to a spokesperson at the Pennsylvania Department of Environmental Protection.
+            </p>
             <p>
                 Flaring and venting are permitted for the vast majority of the more than 10,000 unconventional gas wells in Pennsylvania under what is known as “Exemption 38.”
             </p>
@@ -2368,8 +2408,10 @@
             </p>
             <p>
                 Enclosed flares cut down on noise and light pollution and are typically less likely to be inefficient in the field compared to open flares. Flare enclosures may inhibit satellites from picking up illumination, according to Gunnar Schade, an atmospheric scientist at Texas A&M University who’s studied flaring.
+            </p>
             <p>
-            Satellite data for Pennsylvania shows a significant decline in the number of visible flares in the state of Pennsylvania from 2012 to 2020, according to a Howard Center analysis.            </p>
+            Satellite data for Pennsylvania shows a significant decline in the number of visible flares in the state of Pennsylvania from 2012 to 2020, according to a Howard Center analysis.
+            </p>
             <p>
                 In 2020, the state’s attorney general investigated the oil and gas industry and found that the Department of Environmental Protection and, to a lesser degree, the Pennsylvania Department of Health failed to carry out their oversight duties. It pointed directly to neglect on the part of both departments to investigate complaints, collect health data and warn the community of risks.
             </p>
@@ -2476,7 +2518,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="Texas-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="txupdate(txdata1)" class="data-viz-button">2012</button>
                         <button onclick="txupdate(txdata2)" class="data-viz-button">2013</button>
@@ -2610,6 +2652,7 @@
                         txupdate(txdata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -2621,8 +2664,10 @@
             </p>
             <p>
                 Texas ranks as the nation’s No. 1 flaring state, too. According to a Howard Center analysis of satellite data, oil and gas companies in Texas burned off more than 1.7 trillion cubic feet of natural gas between 2012 and 2020.
+            </p>
             <p>
             Because Texas regulators allowed operators to self-report their flared and vented gas volumes as a combined total prior to September 2021, it’s impossible to compare that data directly to the volumes recorded by the satellites, which can detect only flaring. Venting, which releases planet-warming methane straight into the atmosphere, produces no heat and is not visible to the satellites.
+            </p>
             <p>
             Still, the satellite volumes revealed massive reporting discrepancies in Texas: While companies reported flaring and venting more than 980 billion cubic feet of gas between 2012 and 2020, the satellite data indicates the volume of flared gas alone may be almost twice as high.
             </p>
@@ -2732,7 +2777,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="Utah-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="utupdate(utdata1)" class="data-viz-button">2012</button>
                         <button onclick="utupdate(utdata2)" class="data-viz-button">2013</button>
@@ -2866,6 +2911,7 @@
                         utupdate(utdata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -2877,7 +2923,6 @@
             </p>
             <p>
                 Operators can flare up to 1.8 million cubic feet of gas on a monthly basis without prior approval from the division, or up to 3 million cubic feet the first month after the well-testing period. Flaring and venting are also allowed without approval during testing periods, which can range from 24 hours to 30 days, equipment malfunctions and blowouts. To flare and vent more than approved volumes, companies are required to submit a request to the Utah Board of Oil, Gas and Mining.
-
             </p>
             <p>
                 In addition to the monthly flaring and venting reports, operators are also required to submit an incident report to the division within five days of a major or minor reporting event. Major events include the unauthorized flaring and venting of more than 500,000 cubic feet at upstream production facilities, or more than 1.5 million cubic feet at transportation, gathering and processing facilities. Venting in parks and residential areas are also categorized as a major incident.
@@ -2930,13 +2975,7 @@
                     </div>
                     <!--STATE DATA-->
                     <div>
-                        <p>During the same period,</p>
-                        <div style="width: fit-content">
-                            <!--!!!!PROD REPORTS!!!!-->
-                            <p class="hwrd-big-number">991,443,446,000</p>
-                            <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
-                        </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>The West Virginia Department of Environmental Protection does not require companies to submit records of flaring and venting activities. </p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -2982,7 +3021,7 @@
                     </style>
                     <!-- Create a div where the graph will take place -->
                     <div id="West-Virgina-data-viz"></div>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-direction: row;">
+                    <div class="graph-button">
                         <!-- Add 2 buttons -->
                         <button onclick="wvupdate(wvdata1)" class="data-viz-button">2012</button>
                         <button onclick="wvupdate(wvdata2)" class="data-viz-button">2013</button>
@@ -2998,43 +3037,35 @@
 
                         // create data_set, these are put to BCM
                         var wvdata1 = [
-                            {group: "State reported", value: 83765780},
-                            {group: "Satellite recorded", value: 142189211.48},
+                            {group: "Satellite recorded", value: 3894328.299},
                         ];
 
                         var wvdata2 = [
-                            {group: "State reported", value: 107257153},
-                            {group: "Satellite recorded", value: 111393935.98},
+                            {group: "Satellite recorded", value: 3523210.735},
                         ];
 
                         var wvdata3 = [
-                            {group: "State reported", value: 130075509},
-                            {group: "Satellite recorded", value: 136821095.21},
+                            {group: "Satellite recorded", value: 2392443.775},
                         ];
 
                         var wvdata4 = [
-                            {group: "State reported", value: 102407399},
-                            {group: "Satellite recorded", value: 125079141.97},
+                            {group: "Satellite recorded", value: 1671073.532},
                         ];
                         var wvdata5 = [
-                            {group: "State reported", value: 66023558},
-                            {group: "Satellite recorded", value: 79813748.91},
+                            {group: "Satellite recorded", value: 714443.366},
                         ];
                         var wvdata6 = [
-                            {group: "State reported", value: 80023188},
-                            {group: "Satellite recorded", value: 113975726.07},
+                            {group: "Satellite recorded", value: 621710.326},
                         ];
                         var wvdata7 = [
-                            {group: "State reported", value: 135397352},
-                            {group: "Satellite recorded", value: 182780860.62},
+                            {group: "Satellite recorded", value: 409724.26},
                         ];
                         var wvdata8 = [
-                            {group: "State reported", value: 192368229},
-                            {group: "Satellite recorded", value: 215186632.42},
+                            {group: "Satellite recorded", value: 614399.524},
                         ];
                         var wvdata9 = [
-                            {group: "State reported", value: 94125278},
-                            {group: "Satellite recorded", value: 134469755.335},
+                            {group: "Satellite recorded", value: 137731.579},
+
                         ];
 
                         // set the dimensions and margins of the graph
@@ -3063,7 +3094,7 @@
 
                         // Add Y axis
                         var wvy = d3.scaleLinear()
-                            .domain([0, 230000000])
+                            .domain([0, 4000000])
                             .range([ height, 0]);
                         wvsvg.append("g")
                             .attr("class", "y-axis")
@@ -3116,43 +3147,310 @@
                         wvupdate(wvdata1)
 
                     </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
             <p>
-                North Dakota ranks third in crude oil production as of August 2021, according to the U.S. Energy Information Administration. It produced more than 438 million barrels of oil in 2020 and reported flaring more than 991 billion cubic feet of natural gas, according to state records.
+                West Virginia developed into one of the nation’s top natural gas-producing states during last decade’s fracking boom in Appalachia, surpassing its historic King Coal economy for the first time in 2019, according to the Energy Information Administration.
             </p>
             <p>
-                Oil and natural gas resources in the state are linked to the Bakken Formation, which stretches through western North Dakota into Canada and Montana. Production in the Bakken boomed starting around 2008 as horizontal drilling and hydraulic fracturing made it possible to access oil and gas trapped in the shale formation. As production ramped up, natural gas infrastructure lagged behind, according to North Dakota Department of Mineral Resources Director Lynn Helms. With limited options for moving natural gas to market, the practice of flaring in the Bakken skyrocketed.
+                The state’s Sen. Joe Manchin (D-W.V.), a conservative Democrat who chairs the Senate’s Committee on Energy and Natural Resources, became a roadblock in the passage of the Biden administration’s infrastructure bill, which included ambitious climate reform policies.  Manchin’s refusal to support tighter environmental regulations on the oil and gas industry delayed passage of the bill, which was signed into law only after those provisions were stripped out.
             </p>
             <p>
-                Oil and gas producers release natural gas through flaring or venting — activities that push harmful chemicals into the atmosphere. Venting, or directly releasing methane and other gases into the air, is permissible in North Dakota only in emergency situations or for maintenance, according to the Department of Environmental Quality.
+                Production in West Virginia occurs mostly in the Marcellus, Utica and Devonian shales. The state prohibits the waste of natural gas but allows flaring that is “reasonably necessary” for drilling and safety. The West Virginia Department of Environmental Protection, the agency responsible for permitting, doesn’t maintain data on the amount of flaring and venting companies conduct, although companies are required to keep emissions data and make it available upon request to the department.            </p>
             <p>
-                Satellite data recorded more than 1.2 trillion cubic feet of gas flared in North Dakota from 2012-2020, a Howard Center analysis found, compared to the 991 billion cubic feet producers reported to the state.
+                Companies that construct flare stacks are required to apply for a permit from the department,  but many of the flaring activities that take place are largely unmonitored due to permitting exemptions in state law.
             <p>
-                State-reported flaring totals do not include figures from “confidential wells,” a designation used when a company asks for production information to be temporarily kept confidential. As of September 2021, 7.5% of wells in the state were granted this status by the Department of Mineral Resources. The department, which collects data on flaring, falls under the North Dakota Industrial Commission, which oversees state regulations for the oil and gas industry.
+                States that profit from natural gas sales, such as West Virginia, argue that flaring isn’t as major an issue as it is in oil-producing states since operators would ostensibly want to capture all the marketable gas they produce.
             </p>
             <p>
-                Oil well producers are allowed to flare for one year after the well’s first production date, with no limit on the volume of gas burned. After that period, producers who can prove that connecting to gas gathering infrastructure would be too costly may be granted an exemption to flare. This calculation is made in accordance with state law by adding “the cost of connecting the well” to the cost of operating the connection facility, plus an additional 10% for other overhead costs.
+                But satellite data over a nine-year period reveals that oil and gas operators in West Virginia flared nearly 14 billion cubic feet of natural gas. The satellite also detected a 96% decrease in flaring over that time period.
             </p>
             <p>
-                In an effort to curtail flaring, the North Dakota Industrial Commission implemented a gas capture policy in 2014, requiring companies to use or sell most of the gas they produce. The policy set goals that would incrementally lower the percentage of gas flared to 9% of all gas associated with production by November 2020.
+                A lack of record-keeping on flared and vented volumes of gas in West Virginia is exacerbated by labyrinthine reporting regulations:
             </p>
+            <ul>
+                <li>
+                    West Virginia does not limit the volume of gas companies can legally flare, nor does it require companies to disclose flaring volumes.
+                </li>
+                <li>
+                    The Department of Environmental Protection’s Division of Air Quality requires flare operators to follow emissions limits set by the Environmental Protection Agency. The agency mandates that companies keep records that show they are abiding by the terms of those permits, but it doesn’t require them to submit those records unless requested.
+                </li>
+                <li>
+                    Temporary flaring — flaring for maintenance purposes that lasts no more than 10 days per year or any other flaring that lasts no more than 30 days per year — does not require prior approval; operators only need to send written notifications to the division with their predicted emissions estimates to conduct the activity.
+                </li>
+            </ul>
             <p>
-                sdfadsfsa
+                Flare operators who violate state regulations on air pollution may face penalties up to $10,000 per day, and those who knowingly misrepresent their operations may face penalties up to $25,000 per day, according to state code. The Division of Air Quality has levied at least 31 fines on operators for flaring and venting violations since 2012, and has collected over $2 million in penalties.
             </p>
-            <p>
-                While the Department of Mineral Resources is concerned with preventing the waste of natural resources, the North Dakota Department of Environmental Quality oversees air emissions from flaring and venting. The agency also enforces regulations on flare efficiency, which determines the amount of methane and other chemicals released into the atmosphere.
-            </p>
+
             <!--authors-->
             <p style="padding-bottom: 55px; font-size: 18px; text-align: right;" class="best-friend">
-                – Maya Leachman, Andrew Onodera and Isaac Stone Simonelli
+                – Nicole Sadek and Sarah Suwalsky
             </p>
         </div>
     </div>
+<!--Wyoming-->
+    <div class="glancebox wy-glancebox" id="wy">
+        <div class="item-display">
+            <div class="display-name-box">
+                <p class="display-name">Wyoming</p>
+            </div>
+            <svg id="wy-close" class="close-button-svg close-button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.2" baseProfile="tiny" width="20" height="20" viewBox="0 0 28 28" fill="none">
+
+                <g>
+                    <path d="M3 25L14.2157 13.7843L25 3" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M3 3L14.2157 14.2157L25 25" stroke="#516da6" stroke-width="6" stroke-linecap="round"/>
+                </g>
+                <p class="visually-hidden">Close</p>
+            </svg>
+        </div>
+        <div class="glancebox-inside hwrd-article glance-top-fade">
+            <div>
+                <iframe class="state-iframe" src="https://asu.maps.arcgis.com/apps/instant/basic/index.html?appid=111a1cd9187e48b4b832f6210461171d" width="100%" height="" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
+            </div>
+            <hr class="hwrd-pg-brake">
+            <!--start info box-->
+            <div style="" class="infobox">
+                <!--Text column, then graph-->
+                <div class="infobox-txt" style="">
+                    <!--VIIRS DATA-->
+                    <div>
+                        <p style="margin-top: 10px">From 2014 to 2020,</p>
+                        <div style="width: fit-content">
+                            <!--!!!!VIIRS REPORTS!!!!-->
+                            <p class="hwrd-big-number">27,535,172,994</p>
+                            <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                        </div>
+                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                    </div>
+                    <!--STATE DATA-->
+                    <div>
+                        <p>During the same period,</p>
+                        <div style="width: fit-content">
+                            <!--!!!!PROD REPORTS!!!!-->
+                            <p class="hwrd-big-number">35,937,487,000</p>
+                            <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
+                        </div>
+                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                    </div>
+                    <!--STATE OVERSIGHT-->
+                    <div>
+                        <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
+                        <p style="padding-bottom: 6px">
+                            Wyoming Oil and Gas Conservation Commission
+                        </p>
+                        <p>
+                            Wyoming Department of Environmental Quality
+                        </p>
+                    </div>
+                </div>
+                <!--Graph column-->
+                <div class="graphbox">
+                    <!-- Load d3.js -->
+                    <script src="https://d3js.org/d3.v4.js"></script>
+
+                    <style>
+                        .x-axis line {
+                            opacity: 0;
+                        }
+                        .State {
+                            fill: #5E7EBF;
+                        }
+
+                        .State:hover {
+
+                        }
+
+                        .Satellite {
+                            fill: url(#diagonalHatch);
+                        }
+
+                        .Satellite:hover {
+
+                        }
+
+                        .y {
+                            font-family: Inter, Arial, sans-serif;
+                            font-style: normal;
+                            font-weight: bold;
+                            color: #191919;
+                            font-size: 14px;
+                        }
+
+                    </style>
+                    <!-- Create a div where the graph will take place -->
+                    <div id="Wyoming-data-viz"></div>
+                    <div class="graph-button">
+                        <!-- Add 2 buttons -->
+                        <button onclick="wyupdate(wydata3)" class="data-viz-button">2014</button>
+                        <button onclick="wyupdate(wydata4)" class="data-viz-button">2015</button>
+                        <button onclick="wyupdate(wydata5)" class="data-viz-button">2016</button>
+                        <button onclick="wyupdate(wydata6)" class="data-viz-button">2017</button>
+                        <button onclick="wyupdate(wydata7)" class="data-viz-button">2018</button>
+                        <button onclick="wyupdate(wydata8)" class="data-viz-button">2019</button>
+                        <button onclick="wyupdate(wydata9)" class="data-viz-button">2020</button>
+                    </div>
+                    <script>
+
+                        // create data_set, these are put to BCM
+
+                        var wydata3 = [
+                            {group: "State reported", value: 6138249.000},
+                            {group: "Satellite recorded", value: 4041628.353},
+                        ];
+
+                        var wydata4 = [
+                            {group: "State reported", value: 5483468},
+                            {group: "Satellite recorded", value: 3934217.684},
+                        ];
+                        var wydata5 = [
+                            {group: "State reported", value: 2463680},
+                            {group: "Satellite recorded", value: 2781096.713},
+                        ];
+                        var wydata6 = [
+                            {group: "State reported", value: 3445721},
+                            {group: "Satellite recorded", value: 4506240.306},
+                        ];
+                        var wydata7 = [
+                            {group: "State reported", value: 5909743},
+                            {group: "Satellite recorded", value: 5433109.716},
+                        ];
+                        var wydata8 = [
+                            {group: "State reported", value: 8137620},
+                            {group: "Satellite recorded", value: 4376993.215},
+                        ];
+                        var wydata9 = [
+                            {group: "State reported", value: 4359006},
+                            {group: "Satellite recorded", value: 2461887.007},
+                        ];
+
+                        // set the dimensions and margins of the graph
+                        var margin = {top: 30, right: 30, bottom: 70, left: 95},
+                            width = 340 - margin.left - margin.right,
+                            height = 400 - margin.top - margin.bottom;
+
+                        // append the svg object to the body of the page
+                        let wysvg = d3.select("#Wyoming-data-viz")
+                            .append("svg")
+                            .attr("width", width + margin.left + margin.right)
+                            .attr("height", height + margin.top + margin.bottom)
+                            .append("g")
+                            .attr("transform",
+                                "translate(" + margin.left + "," + margin.top + ")");
+
+                        // X axis
+                        var wyx = d3.scaleBand()
+                            .range([ 0, width ])
+                            .domain(wydata3.map(function(d) { return d.group; }))
+                            .padding(0.2);
+                        wysvg.append("g")
+                            .attr("transform", "translate(0," + height + ")")
+                            .attr("class", "x-axis")
+                            .call(d3.axisBottom(wyx))
+
+                        // Add Y axis
+                        var wyy = d3.scaleLinear()
+                            .domain([0, 6300000])
+                            .range([ height, 0]);
+                        wysvg.append("g")
+                            .attr("class", "y-axis")
+                            .call(d3.axisLeft(wyy));
+
+                        //Y label
+                        wysvg.append("text")
+                            .attr("class", "y label")
+                            .attr("text-anchor", "end")
+                            .attr("y", 6)
+                            .attr("dy", "-6.5em")
+                            .attr("dx", "-5em")
+                            .attr("transform", "rotate(-90)")
+                            .text("Thousand cubic feet");
+
+                        // coloring time!
+
+                        var t = d3.selectAll("text")
+                            .attr("fill", "#191919")
+
+                        var l = d3.selectAll("line")
+                            .attr("stroke", "#191919");
+
+                        var p = wysvg.selectAll("path")
+                            .attr("opacity", "0");
 
 
+                        // A function that create / update the plot for a given variable:
+                        function wyupdate(wydata) {
 
+                            let wyu = wysvg.selectAll("rect")
+                                .data(wydata)
+
+                            wyu
+                                .enter()
+                                .append("rect")
+                                .merge(wyu)
+                                .transition()
+                                .duration(1000)
+                                .attr("x", function(d) { return wyx(d.group); })
+                                .attr("y", function(d) { return wyy(d.value); })
+                                .attr("width", wyx.bandwidth())
+                                .attr("height", function(d) { return height - wyy(d.value); })
+                                .attr("class", function(d) { return d.group; })
+                                .attr("id", "wyrect")
+
+                        }
+
+                        // Initialize the plot with the first dataset
+                        wyupdate(wydata3)
+
+                    </script>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                </div>
+            </div>
+            <hr class="hwrd-pg-brake">
+            <p>
+                With the exception of New Mexico, no other state relies as heavily on revenue from oil and gas production on federal land as Wyoming. Nearly half the land in the state is owned by the U.S. government, which currently oversees nearly 9 million acres of oil and gas leases, more than in any other state.
+            </p>
+            <p>
+                In 2020, royalties from oil and gas production on federal lands across Wyoming generated more than $659 million in revenue.
+            </p>
+            <p>
+                The five-member Wyoming Oil and Gas Conservation Commission — chaired by the governor and including the director of the office of state lands and investments, the state geologist and two appointed members of the public — regulates oil and gas production.
+            </p>
+            <p>
+                As in most of the top oil and gas-producing states, operators are permitted to burn off or release natural gas, a byproduct of oil extraction, during emergencies or when they can’t capture and send the gas to market.
+            </p>
+            <p>
+                From 2014 to 2020, oil and gas companies reported flaring more than 35.9 billion cubic feet of gas. During this period, satellite observations recorded about 27.5 billion cubic feet of flared gas. In response to written questions, the Wyoming Oil and Gas Conservation Commission said it could not speculate on the discrepancy between satellite-recorded volumes and those reported by operators.
+            </p>
+            <p>
+                Wyoming also reported venting more than 1.5 billion cubic feet of gas in addition to the amount it flared.
+            </p>
+            <p>
+                Regulators allow operators to flare up to 60,000 — and vent up to 20,000 — cubic feet per day without a permit. Beyond these limits, operators must seek approval from the commission or the state oil and gas supervisor responsible for enforcing its rules. The supervisor can authorize operators to flare as much as 45 million cubic feet for 180 days. After that, the commission itself must weigh in.
+            </p>
+            <p>
+                The Howard Center reviewed meeting minutes available online between January 2017 and November 2021. During that time, the commission never denied a request to flare.
+            </p>
+            <p>
+                It has penalized companies for breaking its rules, however. In November 2021, the commission levied a $11,000 penalty against Berenergy Corporation for venting in excess of 20,000 cubic feet per day.  Proceeds from fines go to the school district where the violation occurred.
+            </p>
+            <p>
+                Oil and gas operators on federal land must adhere to both state and federal regulations. The Interior Department’s Bureau of Land Management permits flaring and venting during emergencies, well purging and initial production tests. Gas wells are not permitted to release gas outside of these exceptions, but oil wells can flare and vent if the operator can show federal regulators that capturing the gas would be too costly and lead to a premature halt in production. Operators must have a plan for capturing the gas within a year.
+            </p>
+            <p>
+                Given its oil and gas revenue, Wyoming is attuned to decisions in Washington, D.C., and has challenged efforts by the federal government to further regulate oil and gas development.
+            </p>
+            <p>
+                In 2020, for instance, Wyoming helped kill the federal government’s revision of its flaring and venting regulations. The proposed rules would have required operators to capture a majority of produced gas and to quickly repair leaks, and also would have prohibited venting except during emergencies or when flaring was infeasible.
+            </p>
+            <!--authors-->
+            <p style="padding-bottom: 55px; font-size: 18px; text-align: right;" class="best-friend">
+                – Jimmy Cloutier and Michael J. McDaniel
+            </p>
+        </div>
+    </div>
 
 
 
