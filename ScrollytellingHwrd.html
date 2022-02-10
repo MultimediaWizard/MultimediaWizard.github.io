@@ -2,30 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Scrollytelling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrollytelling</title>
     <link rel="stylesheet" href="hwrd-gaslit.css">
+<!--^Taking away CSS is fine, all necessary styling is in the figure (embed) or should take it from ASU default elements-->
 </head>
 <body>
 <article class="hwrd-article">
 <p>
-    Scientists and regulators point to a number of factors to explain the diverging discrepancies. For one, six states allow companies to combine their flaring and venting volumes when they report them — but the satellites rely on heat signatures, meaning they can’t detect venting. For another, the roving satellites can’t be everywhere at once, meaning they don’t catch every flare — let alone every every small or intermittent flare.
+    FILLER Scientists and regulators point to a number of factors to explain the diverging discrepancies. For one, six states allow companies to combine their flaring and venting volumes when they report them — but the satellites rely on heat signatures, meaning they can’t detect venting. For another, the roving satellites can’t be everywhere at once, meaning they don’t catch every flare — let alone every every small or intermittent flare.
 </p>
 <p>
-    Despite these issues, the fact that all nine states’ nunc aliquet bibendum strays so far from those of an independent check suggests that government data on flaring and venting is inaccurate or incomplete — and that state and federal policymakers don’t have a good grasp on the greenhouse gases spilling into the air.
+    FILLER Despite these issues, the fact that all nine states’ nunc aliquet bibendum strays so far from those of an independent check suggests that government data on flaring and venting is inaccurate or incomplete — and that state and federal policymakers don’t have a good grasp on the greenhouse gases spilling into the air.
 </p>
 <p>
-    That includes the Environmental Protection Agency and other decision makers crafting climate legislation at a critical stage in worldwide efforts to slow global warming.
+    FILLER That includes the Environmental Protection Agency and other decision makers crafting climate legislation at a critical stage in worldwide efforts to slow global warming.
 </p>
 <p>
-    “We’re absolutely underestimating emissions,” said Doty. “I can’t even fathom how much we’re underestimating emissions.”
+    FILLER “We’re absolutely underestimating emissions,” said Doty. “I can’t even fathom how much we’re underestimating emissions.”
 </p>
 
+
+<!--EMBED START-->
 <figure class="hwrd-scrolly-figure">
     <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
-    <script src="stickyfill.min.js"></script>
+
 
     <style>
         .scrolly {
@@ -33,9 +36,21 @@
             /*border: 4px dashed blue;*/
         }
 
+        .scrolly img, video {
+            height: auto;
+            max-width: 100%;
+            border-style: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+
         .scrolly-graphics {
             height: 100vh;
             overflow: hidden;
+            position: -webkit-sticky;
             position: sticky;
             top: 0;
             z-index: 0;
@@ -86,6 +101,10 @@
         .scrolly-step-content p {
             padding-bottom: 0px;
             font-size: 22px;
+            font-family: Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-serif;
+            font-weight: 400;
+            color: #191919;
+            line-height: 34px;
         }
 
         .scrolly-fig-caption {
@@ -93,18 +112,18 @@
             font-size: 1rem;
             text-align: left;
             font-family: Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-serif;
-            margin-top: -210px;
+            margin-top: 0px;
         }
 
         @media screen and (min-width: 1024px){
             .scrolly-fig-caption {
-                margin-top: -230px;
+                margin-top: 0px;
             }
         }
 
         @media screen and (min-width: 1440px){
             .scrolly-fig-caption {
-                margin-top: -136px;
+                margin-top: 0px;
             }
         }
 
@@ -316,7 +335,8 @@
         <div class="scrolly-step" data-step="scrolly-graphic-1">
             <div class="is-active scrolly-step-content">
                 <p>
-                    We use natural gas everyday to heat our homes, cook our food and dry our clothes. But where does natural gas come from and how do its emissions contribute to climate change?                </p>
+                    We use natural gas everyday to heat our homes, cook our food and dry our clothes. But where does natural gas come from and how do its emissions contribute to climate change?
+                </p>
             </div>
         </div>
 
@@ -332,28 +352,32 @@
         <div class="scrolly-step" data-step="scrolly-graphic-3" data-scrollama-index="1">
             <div class="scrolly-step-content scrolly-step-content-right">
                 <p>
-                    Fracking, a common form of drilling, is the process of injecting liquid into the ground at a high pressure, causing rock fixtures to crack open and release the natural gas and oil trapped inside.                </p>
+                    Fracking, a common form of drilling, is the process of injecting liquid into the ground at a high pressure, causing rock fixtures to crack open and release the natural gas and oil trapped inside.
+                </p>
             </div>
         </div>
 
         <div class="scrolly-step" data-step="scrolly-graphic-4" data-scrollama-index="2">
             <div class="scrolly-step-content scrolly-step-content-right">
                 <p>
-                    The natural gas that is extracted can either be sold on the market, used at the wellsite or disposed of entirely.                 </p>
+                    The natural gas that is extracted can either be sold on the market, used at the wellsite or disposed of entirely.
+                </p>
             </div>
         </div>
 
         <div class="scrolly-step" data-step="scrolly-graphic-5" data-scrollama-index="3">
             <div class="scrolly-step-content scrolly-step-content-right">
                 <p>
-                    Many drilling companies say it’s safer or more economical to dispose of the gas than to use or sell it. They do this by burning it off, or “flaring.”                </p>
+                    Many drilling companies say it’s safer or more economical to dispose of the gas than to use or sell it. They do this by burning it off, or “flaring.”
+                </p>
             </div>
         </div>
 
         <div class="scrolly-step" data-step="scrolly-graphic-6" data-scrollama-index="4">
             <div class="scrolly-step-content scrolly-step-content-right">
                 <p>
-                    Natural gas is composed of methane and other harmful gases, but flaring burns away a large percentage of those compounds, releasing mostly carbon dioxide into the atmosphere.                </p>
+                    Natural gas is composed mainly of methane and other greenhouse gases, but flaring burns away a large percentage of those compounds, releasing mostly carbon dioxide into the atmosphere.
+                </p>
             </div>
         </div>
 
@@ -368,14 +392,15 @@
         <div class="scrolly-step" data-step="scrolly-graphic-8" data-scrollama-index="5">
             <div class="scrolly-step-content scrolly-step-content-right">
                 <p>
-                    These inefficient flares push a larger percentage of the greenhouse gas into the atmosphere.                </p>
+                    These inefficient flares push a larger percentage of the greenhouse gas into the atmosphere.
+                </p>
             </div>
         </div>
 
         <div class="scrolly-step" data-step="scrolly-graphic-9" data-scrollama-index="5">
             <div class="scrolly-step-content scrolly-step-content-right">
                 <p>
-                    Some flares are unlit and simply “vent” pure methane directly into the air.
+                    Some flares are unlit and simply “vent” methane directly into the air.
                 </p>
             </div>
         </div>
@@ -391,7 +416,8 @@
         <div class="scrolly-step" data-step="scrolly-graphic-11" data-scrollama-index="5">
             <div class="scrolly-step-content scrolly-step-content-long">
                 <p>
-                    Methane released during flaring and venting has the potential to trap heat in the Earth’s atmosphere more than 80 times more than carbon dioxide within a 20-year period.                </p>
+                    Methane released during flaring and venting has the potential to trap heat in the Earth’s atmosphere more than 80 times more than carbon dioxide within a 20-year period.
+                </p>
             </div>
         </div>
 
@@ -438,7 +464,7 @@
         Nicole Sadek and Zach Van Arsdale for the Howard Center
     </figcaption>
 
-
+<!--EMBED END-->
 
 </figure>
 
