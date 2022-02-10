@@ -2555,10 +2555,11 @@
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
                             width = 340 - margin.left - margin.right,
                             height = 400 - margin.top - margin.bottom;
-
                         // append the svg object to the body of the page
+                        let svgSmall = "svg-small"
                         let txsvg = d3.select("#Texas-data-viz")
                             .append("svg")
+                            .attr("class", svgSmall)
                             .attr("width", width + margin.left + margin.right)
                             .attr("height", height + margin.top + margin.bottom)
                             .append("g")
