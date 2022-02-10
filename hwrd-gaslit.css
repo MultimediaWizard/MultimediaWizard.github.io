@@ -636,6 +636,30 @@ p {
     transition: all 220ms;
 
 }
+@media only screen and (max-width: 480px) {
+    .close-button {
+        margin-right: 0;
+        cursor: pointer;
+        width: 37px;
+        height: 37px;
+        stroke: currentColor;
+        fill: currentColor;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .close-button-svg {
+        font-size: 0.10em;
+        vector-effect: non-scaling-stroke;
+        margin: 0;
+        border: 0;
+        padding: 4px;
+        background: #A7BCE6;
+        border-radius: 50%;
+        transition: all 220ms;
+
+    }
+}
 
 .close-button-svg:hover,.close-button-svg:focus {
              transform: rotateZ(90deg);
