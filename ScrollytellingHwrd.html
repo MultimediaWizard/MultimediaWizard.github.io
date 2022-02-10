@@ -2,30 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Scrollytelling</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scrollytelling</title>
     <link rel="stylesheet" href="hwrd-gaslit.css">
+<!--^Taking away CSS is fine, all necessary styling is in the figure (embed) or should take it from ASU default elements-->
 </head>
 <body>
 <article class="hwrd-article">
 <p>
-    Scientists and regulators point to a number of factors to explain the diverging discrepancies. For one, six states allow companies to combine their flaring and venting volumes when they report them — but the satellites rely on heat signatures, meaning they can’t detect venting. For another, the roving satellites can’t be everywhere at once, meaning they don’t catch every flare — let alone every every small or intermittent flare.
+    FILLER Scientists and regulators point to a number of factors to explain the diverging discrepancies. For one, six states allow companies to combine their flaring and venting volumes when they report them — but the satellites rely on heat signatures, meaning they can’t detect venting. For another, the roving satellites can’t be everywhere at once, meaning they don’t catch every flare — let alone every every small or intermittent flare.
 </p>
 <p>
-    Despite these issues, the fact that all nine states’ nunc aliquet bibendum strays so far from those of an independent check suggests that government data on flaring and venting is inaccurate or incomplete — and that state and federal policymakers don’t have a good grasp on the greenhouse gases spilling into the air.
+    FILLER Despite these issues, the fact that all nine states’ nunc aliquet bibendum strays so far from those of an independent check suggests that government data on flaring and venting is inaccurate or incomplete — and that state and federal policymakers don’t have a good grasp on the greenhouse gases spilling into the air.
 </p>
 <p>
-    That includes the Environmental Protection Agency and other decision makers crafting climate legislation at a critical stage in worldwide efforts to slow global warming.
+    FILLER That includes the Environmental Protection Agency and other decision makers crafting climate legislation at a critical stage in worldwide efforts to slow global warming.
 </p>
 <p>
-    “We’re absolutely underestimating emissions,” said Doty. “I can’t even fathom how much we’re underestimating emissions.”
+    FILLER “We’re absolutely underestimating emissions,” said Doty. “I can’t even fathom how much we’re underestimating emissions.”
 </p>
 
+
+<!--EMBED START-->
 <figure class="hwrd-scrolly-figure">
     <script src="https://unpkg.com/d3@5.9.1/dist/d3.min.js"></script>
     <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
     <script src="https://unpkg.com/scrollama"></script>
-    <script src="stickyfill.min.js"></script>
+
 
     <style>
         .scrolly {
@@ -33,9 +36,21 @@
             /*border: 4px dashed blue;*/
         }
 
+        .scrolly img, video {
+            height: auto;
+            max-width: 100%;
+            border-style: none;
+            display: block;
+            margin: 0;
+            padding: 0;
+            vertical-align: baseline;
+            box-sizing: border-box;
+        }
+
         .scrolly-graphics {
             height: 100vh;
             overflow: hidden;
+            position: -webkit-sticky;
             position: sticky;
             top: 0;
             z-index: 0;
@@ -86,6 +101,10 @@
         .scrolly-step-content p {
             padding-bottom: 0px;
             font-size: 22px;
+            font-family: Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-serif;
+            font-weight: 400;
+            color: #191919;
+            line-height: 34px;
         }
 
         .scrolly-fig-caption {
@@ -93,18 +112,18 @@
             font-size: 1rem;
             text-align: left;
             font-family: Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-serif;
-            margin-top: -210px;
+            margin-top: 0px;
         }
 
         @media screen and (min-width: 1024px){
             .scrolly-fig-caption {
-                margin-top: -230px;
+                margin-top: 0px;
             }
         }
 
         @media screen and (min-width: 1440px){
             .scrolly-fig-caption {
-                margin-top: -136px;
+                margin-top: 0px;
             }
         }
 
@@ -438,7 +457,7 @@
         Nicole Sadek and Zach Van Arsdale for the Howard Center
     </figcaption>
 
-
+<!--EMBED END-->
 
 </figure>
 
