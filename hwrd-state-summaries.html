@@ -12,7 +12,7 @@
         <div class="static state-cont">
 
 <!--TITLE-->
-          <h1 class="hwrd-asu-h1">How flaring is tracked in each major oil producing state</h1>
+          <h1 class="hwrd-asu-h1">How gas flaring is regulated and documented across the U.S.</h1>
 <!--TITLE-->
 
 
@@ -92,14 +92,17 @@
 <!--Begin explanation and state selector-->
               <div class="state-select" style="">
                   <p style="color:#516da6; font-family:Arial, Helvetica, “Nimbus Sans L”, “Liberation Sans”, FreeSans, sans-serif; font-weight: bold;line-height: 22px; font-size: 1.05rem" >Click on a highlighted state to view local flaring data and regulations, or select a state below.</p>
+
+                  <div class="select-div">
+
                   <select name="states" class="dropdown-select" id="state-select" onchange="stateSelect();">
-                      <option value="none">Select state</option>
+                      <option value="none">Select State</option>
                       <option value="alaska">Alaska</option>
                       <option value="colorado">Colorado</option>
                       <option value="kansas">Kansas</option>
                       <option value="louisiana">Louisiana</option>
                       <option value="montana">Montana</option>
-                      <option value="new-mexico">New Mexico</option>
+                      <option value="new-mexico">New Mexico   </option>
                       <option value="north-dakota">North Dakota</option>
                       <option value="oklahoma">Oklahoma</option>
                       <option value="pennsylvania">Pennsylvania</option>
@@ -107,7 +110,10 @@
                       <option value="west-virgina">West Virgina</option>
                       <option value="utah">Utah</option>
                       <option value="wyoming">Wyoming</option>
+
+
                   </select>
+                  </div>
               </div>
 <!--End explanation and state selector-->
           </div>
@@ -115,9 +121,19 @@
 
 <!--ABOUT SECTION-->
         <h2 class="hwrd-h2">About the state summaries</h2>
-        <p>The Howard Center investigated 13 states with significant flaring activity and documented state flaring and venting data, state regulations and oversight agencies.</p>
+        <p>The Howard Center investigated 13 states with current gas flaring and potential for oil development, documenting state flaring and venting data, state regulations and oversight agencies. </p>
 
 <!--ABOUT SECTION-->
+
+<!--FLARING DATA SECTION-->
+        <h2 class="hwrd-h2">Is there flaring near you?</h2>
+        <p>
+            This map contains VIIRS satellite data from 2012 to 2020 put through an algorithm to detect flaring at night and approximate flaring volumes from the gas and oil industry.
+        </p>
+
+        <iframe src="https://asu.maps.arcgis.com/apps/instant/basic/index.html?appid=111a1cd9187e48b4b832f6210461171d" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
+
+<!--FLARING DATA SECTION-->
 
 
         <!--This is to get my silly stripes, please ignore-->
@@ -151,7 +167,8 @@
             </div>
             <div class="glancebox-inside hwrd-article glance-top-fade">
 
-                <hr class="hwrd-pg-brake">
+<!--Map used to go here-->
+
     <!--start info box-->
                 <div style="" class="infobox">
                     <!--Text column, then graph-->
@@ -235,44 +252,45 @@
 
                             // create data_set,
                             var akdata1 = [
-                                {group: "State reported", value: 49548561},
-                                {group: "Satellite recorded", value: 125233219.45},
+                                {group: "State reported", value: 3987801},
+                                {group: "Satellite recorded", value: 4348044.649},
                             ];
 
                             var akdata2 = [
-                                {group: "State reported", value: 75254751},
-                                {group: "Satellite recorded", value: 141805761.86},
+                                {group: "State reported", value: 3206780},
+                                {group: "Satellite recorded", value: 3788479.546},
                             ];
 
                             var akdata3 = [
-                                {group: "State reported", value: 91337724},
-                                {group: "Satellite recorded", value: 182579515.31},
+                                {group: "State reported", value: 2625477},
+                                {group: "Satellite recorded", value: 5309675.125},
                             ];
 
                             var akdata4 = [
-                                {group: "State reported", value: 105000500},
-                                {group: "Satellite recorded", value: 204646921.49},
+                                {group: "State reported", value: 1406259},
+                                {group: "Satellite recorded", value: 5413553.018},
                             ];
                             var akdata5 = [
-                                {group: "State reported", value: 84301823},
-                                {group: "Satellite recorded", value: 160627402.36},
+                                {group: "State reported", value: 4393122},
+                                {group: "Satellite recorded", value: 6684789.226},
                             ];
                             var akdata6 = [
-                                {group: "State reported", value: 90446858},
-                                {group: "Satellite recorded", value: 163498951.32},
+                                {group: "State reported", value: 2864270},
+                                {group: "Satellite recorded", value: 5154675.995},
                             ];
                             var akdata7 = [
-                                {group: "State reported", value: 154922097},
-                                {group: "Satellite recorded", value: 229158062.91},
+                                {group: "State reported", value: 4238684},
+                                {group: "Satellite recorded", value: 4565884.333},
                             ];
                             var akdata8 = [
-                                {group: "State reported", value: 206923587},
-                                {group: "Satellite recorded", value: 308455895.36},
+                                {group: "State reported", value: 3027357},
+                                {group: "Satellite recorded", value: 7548587.999},
                             ];
                             var akdata9 = [
-                                {group: "State reported", value: 122997438},
-                                {group: "Satellite recorded", value: 213903491.93},
+                                {group: "State reported", value: 1495707},
+                                {group: "Satellite recorded", value: 6888470.598},
                             ];
+                            // CHECKED 2/11/22
 
                             // set the dimensions and margins of the graph
                             var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -300,7 +318,7 @@
 
                             // Add Y axis
                             var aky = d3.scaleLinear()
-                                .domain([30000000, 310000000])
+                                .domain([0, 8000000])
                                 .range([ height, 0]);
                             aksvg.append("g")
                                 .attr("class", "y-axis")
@@ -408,7 +426,7 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
+
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -493,43 +511,44 @@
                         // create data_set, these are put to MCF
                         var data1 = [
                             {group: "State reported", value: 6510004},
-                            {group: "Satellite recorded", value: 4580742},
+                            {group: "Satellite recorded", value: 4580742.886},
                         ];
 
                         var data2 = [
                             {group: "State reported", value: 7915889},
-                            {group: "Satellite recorded", value: 5555487},
+                            {group: "Satellite recorded", value: 5555487.021},
                         ];
 
                         var data3 = [
                             {group: "State reported", value: 5341908},
-                            {group: "Satellite recorded", value: 4572829},
+                            {group: "Satellite recorded", value: 4572829.789},
                         ];
 
                         var data4 = [
                             {group: "State reported", value: 4251488},
-                            {group: "Satellite recorded", value: 4187837},
+                            {group: "Satellite recorded", value: 4187837.342},
                         ];
                         var data5 = [
                             {group: "State reported", value: 2615860},
-                            {group: "Satellite recorded", value: 766125},
+                            {group: "Satellite recorded", value: 766125.761},
                         ];
                         var data6 = [
                             {group: "State reported", value: 3331882},
-                            {group: "Satellite recorded", value: 1426132},
+                            {group: "Satellite recorded", value: 1426132.627},
                         ];
                         var data7 = [
                             {group: "State reported", value: 6288545},
-                            {group: "Satellite recorded", value: 2249836},
+                            {group: "Satellite recorded", value: 2249836.422},
                         ];
                         var data8 = [
                             {group: "State reported", value: 5902962},
-                            {group: "Satellite recorded", value: 614391},
+                            {group: "Satellite recorded", value: 643391.348},
                         ];
                         var data9 = [
                             {group: "State reported", value: 3069749},
-                            {group: "Satellite recorded", value: 506703},
+                            {group: "Satellite recorded", value: 506703.135},
                         ];
+                        //CHECKED 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -667,7 +686,7 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
+
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -768,11 +787,13 @@
                             {group: "Satellite recorded", value: 312642.188},
                         ];
                         var ksdata8 = [
-                            {group: "Satellite recorded", value: 65746.3283},
+                            {group: "Satellite recorded", value: 65746.328},
                         ];
                         var ksdata9 = [
                             {group: "Satellite recorded", value: 0},
                         ];
+
+                        //CHECKED 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -894,7 +915,6 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -1016,6 +1036,8 @@
                             {group: "State reported", value: 4442725},
                             {group: "Satellite recorded", value: 1080539.73},
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -1148,7 +1170,7 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
+
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -1230,7 +1252,7 @@
                     </div>
                     <script>
 
-                        // create data_set, these are put to BCM
+                        // create data_set,
                         var mtdata1 = [
                             {group: "State reported", value: 4399745},
                             {group: "Satellite recorded", value: 3558865.82},
@@ -1270,6 +1292,8 @@
                             {group: "State reported", value: 3855011},
                             {group: "Satellite recorded", value: 1832665.85},
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -1403,7 +1427,7 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
+
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -1488,7 +1512,7 @@
                     <script>
 
                         // create data_set, these are put to BCM
-
+                        //STARTS AT 2014
                         var nmdata3 = [
                             {group: "State reported", value: 10355390.00},
                             {group: "Satellite recorded", value: 31313897.26},
@@ -1504,11 +1528,11 @@
                         ];
                         var nmdata6 = [
                             {group: "State reported", value: 15274456},
-                            {group: "Satellite recorded", value: 22636283.01},
+                            {group: "Satellite recorded", value: 22636283.006},
                         ];
                         var nmdata7 = [
                             {group: "State reported", value: 35678946},
-                            {group: "Satellite recorded", value: 41056686.16},
+                            {group: "Satellite recorded", value: 41056686.17},
                         ];
                         var nmdata8 = [
                             {group: "State reported", value: 35724446},
@@ -1518,6 +1542,7 @@
                             {group: "State reported", value: 20876711},
                             {group: "Satellite recorded", value: 36024165.27},
                         ];
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -1658,7 +1683,6 @@
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
 
-            <hr class="hwrd-pg-brake">
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -1762,7 +1786,7 @@
 
                         var nddata4 = [
                             {group: "State reported", value: 102407399},
-                            {group: "Satellite recorded", value: 125079141.97},
+                            {group: "Satellite recorded", value: 125079141.98},
                         ];
                         var nddata5 = [
                             {group: "State reported", value: 66023558},
@@ -1782,8 +1806,9 @@
                         ];
                         var nddata9 = [
                             {group: "State reported", value: 94125278},
-                            {group: "Satellite recorded", value: 134469755.335},
+                            {group: "Satellite recorded", value: 134469755.329},
                         ];
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -1918,7 +1943,6 @@
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
 
-            <hr class="hwrd-pg-brake">
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -2026,7 +2050,7 @@
                         ];
                         var okdata5 = [
                             {group: "State reported", value: 98670},
-                            {group: "Satellite recorded", value: 3380856.1},
+                            {group: "Satellite recorded", value: 3380856.104},
                         ];
                         var okdata6 = [
                             {group: "State reported", value: 280882},
@@ -2038,12 +2062,14 @@
                         ];
                         var okdata8 = [
                             {group: "State reported", value: 552996},
-                            {group: "Satellite recorded", value: 3495200.88},
+                            {group: "Satellite recorded", value: 3495200.885},
                         ];
                         var okdata9 = [
                             {group: "State reported", value: 349385},
-                            {group: "Satellite recorded", value: 2747680.45},
+                            {group: "Satellite recorded", value: 2747680.446},
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -2184,7 +2210,7 @@
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
 
-            <hr class="hwrd-pg-brake">
+
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -2263,35 +2289,37 @@
 
                         // create data_set, these are put to MCF
                         var padata1 = [
-                            {group: "Satellite recorded", value: 7923256.7},
+                            {group: "Satellite recorded", value: 7923256.697},
                         ];
 
                         var padata2 = [
-                            {group: "Satellite recorded", value: 3750308.55},
+                            {group: "Satellite recorded", value: 3750308.549},
                         ];
 
                         var padata3 = [
-                            {group: "Satellite recorded", value: 3808779.46},
+                            {group: "Satellite recorded", value: 3808779.457},
                         ];
 
                         var padata4 = [
-                            {group: "Satellite recorded", value: 2038915.2},
+                            {group: "Satellite recorded", value: 2038915.198},
                         ];
                         var padata5 = [
-                            {group: "Satellite recorded", value: 1004257.26},
+                            {group: "Satellite recorded", value: 1004257.261},
                         ];
                         var padata6 = [
-                            {group: "Satellite recorded", value: 617859.75},
+                            {group: "Satellite recorded", value: 617859.756},
                         ];
                         var padata7 = [
                             {group: "Satellite recorded", value: 1119399.62},
                         ];
                         var padata8 = [
-                            {group: "Satellite recorded", value: 767405.2},
+                            {group: "Satellite recorded", value: 767405.205},
                         ];
                         var padata9 = [
-                            {group: "Satellite recorded", value: 54692.91},
+                            {group: "Satellite recorded", value: 54692.919},
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -2430,7 +2458,6 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -2556,6 +2583,8 @@
                             {group: "State reported", value: 122997438},
                             {group: "Satellite recorded", value: 213903491.93},
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -2689,7 +2718,6 @@
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
 
-            <hr class="hwrd-pg-brake">
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -2812,6 +2840,8 @@
                             {group: "State reported", value: 595466},
                             {group: "Satellite recorded", value: 1569618.38},
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -2936,7 +2966,6 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -3045,6 +3074,8 @@
                             {group: "Satellite recorded", value: 137731.579},
 
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
@@ -3185,7 +3216,7 @@
             </svg>
         </div>
         <div class="glancebox-inside hwrd-article glance-top-fade">
-            <hr class="hwrd-pg-brake">
+
             <!--start info box-->
             <div style="" class="infobox">
                 <!--Text column, then graph-->
@@ -3270,7 +3301,7 @@
                     <script>
 
                         // create data_set, these are put to BCM
-
+                        //STARTS AT 2014
                         var wydata3 = [
                             {group: "State reported", value: 6138249.000},
                             {group: "Satellite recorded", value: 4041628.353},
@@ -3300,6 +3331,8 @@
                             {group: "State reported", value: 4359006},
                             {group: "Satellite recorded", value: 2461887.007},
                         ];
+
+                        //checked 2/11/22
 
                         // set the dimensions and margins of the graph
                         var margin = {top: 30, right: 30, bottom: 70, left: 95},
