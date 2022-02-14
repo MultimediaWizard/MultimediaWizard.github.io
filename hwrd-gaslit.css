@@ -532,6 +532,8 @@ p {
         border-radius: 47px;
         width: calc(100% - 5px);
         padding: 40px 10px 10px;
+        overflow-x: hidden;
+
 
     }
 }
@@ -544,6 +546,8 @@ p {
     margin-bottom: -3px;
     padding-top: 76px;
     padding-bottom: 50px;
+    overflow-x: hidden;
+    width: 100%;
 
 
 }
