@@ -12,7 +12,7 @@
         <div class="static state-cont">
 
 <!--TITLE-->
-          <h1 class="hwrd-asu-h1">How gas flaring is regulated and documented across the U.S.</h1>
+          <h1 class="hwrd-asu-h1">How the top flaring states in the U.S. regulate and track their volumes of natural gas flared</h1>
 <!--TITLE-->
 
 
@@ -95,7 +95,7 @@
 
                   <div class="select-div">
 
-                  <select name="states" class="dropdown-select" id="state-select" onchange="stateSelect();">
+                  <select name="states" class="dropdown-select" id="state-select" onchange="stateSelect(); this.value = 'none';">
                       <option value="none">Select State</option>
                       <option value="alaska">Alaska</option>
                       <option value="colorado">Colorado</option>
@@ -107,8 +107,8 @@
                       <option value="oklahoma">Oklahoma</option>
                       <option value="pennsylvania">Pennsylvania</option>
                       <option value="texas">Texas</option>
-                      <option value="west-virgina">West Virgina</option>
                       <option value="utah">Utah</option>
+                      <option value="west-virgina">West Virgina</option>
                       <option value="wyoming">Wyoming</option>
 
 
@@ -121,14 +121,16 @@
 
 <!--ABOUT SECTION-->
         <h2 class="hwrd-h2">About the state summaries</h2>
-        <p>The Howard Center investigated 13 states with current gas flaring and potential for oil development, documenting state flaring and venting data, state regulations and oversight agencies. </p>
+        <p>
+            The Howard Center investigated the 13 states designated by the U.S. Energy Department as having the most active or potential for natural gas flaring, documenting their data, regulations and oversight agencies.
+        </p>
 
 <!--ABOUT SECTION-->
 
 <!--FLARING DATA SECTION-->
         <h2 class="hwrd-h2">Is there flaring near you?</h2>
         <p>
-            This map contains VIIRS satellite data from 2012 to 2020 put through an algorithm to detect flaring at night and approximate flaring volumes from the gas and oil industry.
+            This map contains VIIRS satellite data from 2012 to 2020. It shows flaring volumes from the oil and gas industry.
         </p>
 
         <iframe src="https://asu.maps.arcgis.com/apps/instant/basic/index.html?appid=111a1cd9187e48b4b832f6210461171d" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>iFrames are not supported on this page.</iframe>
@@ -178,26 +180,27 @@
                             <p style="margin-top: 10px">From 2012 to 2020,</p>
                             <div style="width: fit-content">
                                 <!--!!!!VIIRS REPORTS!!!!-->
-                                <p class="hwrd-big-number">27,245,457,000</p>
+                                <p class="hwrd-big-number">49,702,160,488</p>
                                 <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                             </div>
-                            <p>of flared gas was detected by the VIIRS satellite.</p>
+                            <p>of flared gas was recorded by the VIIRS satellite.</p>
                         </div>
                         <!--STATE DATA-->
                         <div>
                             <p>During the same period,</p>
                             <div style="width: fit-content">
                                 <!--!!!!PROD REPORTS!!!!-->
-                                <p class="hwrd-big-number">49,702,160,488</p>
+                                <p class="hwrd-big-number">27,245,457,000</p>
                                 <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                             </div>
-                            <p>of flared and vented gas was reported by companies in production reports.</p>
+                            <p>of flared and vented gas was reported by the state.</p>
                         </div>
                         <!--STATE OVERSIGHT-->
                         <div>
                             <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
-                            <p style="padding-bottom: 6px">Alaska Oil and Gas Conservation Commission</p>
-                            <p>State of Alaska Department of Natural Resources: Division of Oil and Gas</p>
+                            <p style="padding-bottom: 6px">Alaska Oil and Gas Conservation Commission </p>
+                            <p>Alaska Department of Environmental Conservation (Air Permit Program)</p>
+                            <p>Alaska Department of Natural Resources (Division of Oil and Gas)</p>
                         </div>
                     </div>
                     <!--Graph column-->
@@ -371,7 +374,7 @@
                             akupdate(akdata1)
 
                         </script>
-                        <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                        <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                     </div>
                 </div>
                 <hr class="hwrd-pg-brake">
@@ -439,7 +442,7 @@
                             <p class="hwrd-big-number">24,489,086,331</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -449,7 +452,7 @@
                             <p class="hwrd-big-number">45,228,287,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared and vented gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -628,7 +631,7 @@
                         coupdate(data1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -699,12 +702,9 @@
                             <p class="hwrd-big-number">2,056,770,114</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
-                    <div>
-                        <p>The Conservation Division of the Kansas Corporation Commission does not maintain records of flaring and venting activities and last collected data from operators in 2012. </p>
-                    </div>
                     <!--STATE OVERSIGHT-->
                     <div>
                         <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
@@ -874,7 +874,7 @@
                         ksupdate(ksdata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see satellite-recorded flaring volumes. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -882,7 +882,7 @@
                 In 1947, Kansas was the site of the nation’s first experimental hydraulic fracturing operation. Fracking, as the technology is now commonly known, became a driver of the oil and gas industry in the late 20th century, and by 2015, accounted for 51% of the national crude oil production. Kansas accounted for about 1% of total U.S. oil production in 2020.
             </p>
             <p>
-                According to a 2019 Department of Energy report, Kansas ranks among the top 13 flaring states in the country. The Kansas Corporation Commission’s Conservation Division regulates oil and gas for the state. Although the commission published a set of rules for flaring and venting, it does not maintain records on these activities in any centralized database. Ryan Hoffman, director of the division, says flaring is rare. But the VIIRS satellite, which detects flaring through heat signatures, flaring volumes in Kansas increased consistently between 2012 and 2015 and saw a sharp decline between 2018 and 2020. Overall, the satellite detected more than 2 billion cubic feet of gas flared in the state between 2012 and 2020.
+                According to a 2019 Department of Energy report, Kansas ranks among the top 13 flaring states in the country. The Kansas Corporation Commission’s Conservation Division regulates oil and gas for the state. Although the commission published a set of rules for flaring and venting, it does not maintain records on these activities in any centralized database. Ryan Hoffman, director of the division, says flaring is rare. But satellite data shows flaring volumes in Kansas increased consistently between 2012 and 2015, with a sharp decline between 2018 and 2020. Overall, the satellite recorded more than 2 billion cubic feet of gas flared in the state between 2012 and 2020.
             </p>
             <p>
                 Hoffman estimated the Kansas Corporation Commission currently oversees more than 100,000 wells. To flare for a period of  up to 30 days — consecutively or intermittently — operators on horizontal wells, associated with fracking, must file a form with the state within five days of beginning flaring. To flare for more than 30 days, they must submit an application for the commission’s consideration. Venting — the direct release of methane into the atmosphere — is prohibited on horizontal wells in the state.
@@ -927,7 +927,7 @@
                             <p class="hwrd-big-number">34,118,307,131</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -937,7 +937,7 @@
                             <p class="hwrd-big-number">45,068,737,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared and vented gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -1118,7 +1118,7 @@
                         laupdate(ladata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -1183,7 +1183,7 @@
                             <p class="hwrd-big-number">16,573,487,214</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -1193,7 +1193,7 @@
                             <p class="hwrd-big-number">40,952,143,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared and vented gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -1374,7 +1374,7 @@
                         mtupdate(mtdata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -1440,7 +1440,7 @@
                             <p class="hwrd-big-number">252,539,774,387</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -1450,7 +1450,7 @@
                             <p class="hwrd-big-number">168,634,691,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -1623,7 +1623,7 @@
                         nmupdate(nmdata3)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -1695,7 +1695,7 @@
                             <p class="hwrd-big-number">1,241,710,107,996</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -1705,7 +1705,7 @@
                             <p class="hwrd-big-number">991,443,446,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -1889,7 +1889,7 @@
                         ndupdate(nddata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -1955,7 +1955,7 @@
                             <p class="hwrd-big-number">32,102,733,451</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -1965,7 +1965,7 @@
                             <p class="hwrd-big-number">4,836,390,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared and vented gas was reported on state permits.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -2150,12 +2150,12 @@
                         okupdate(okdata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
             <p>
-                Oklahoma was the nation’s fourth largest oil-producing stateand fourth-largest natural gas producer in 2020, according to the U.S. Energy Information Administration.
+                Oklahoma was the nation’s fourth-largest oil-producing state and fourth-largest natural gas producer in 2020, according to the U.S. Energy Information Administration.
             </p>
             <p>
                 The Oklahoma Corporation Comission’s Oil and Gas Conservation Division is responsible for preventing pollution from oil and gas production, preventing waste of state resources and protecting the rights of those entitled to proceeds. The agency estimates there are currently about 200,000 active oil and gas wells in Oklahoma.
@@ -2223,12 +2223,10 @@
                             <p class="hwrd-big-number">21,084,874,658</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
-                    <div>
-                        <p>Pennsylvania does not track the volumes of natural gas flared and vented.</p>
-                    </div>
+
                     <!--STATE OVERSIGHT-->
                     <div>
                         <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
@@ -2400,7 +2398,7 @@
                         paupdate(padata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see satellite-recorded flaring volumes. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -2408,7 +2406,7 @@
                 Pennsylvania, which saw a boom in fracking around 2010, is primarily focused on natural gas production in the Marcellus Shale, located in the northern, western and central parts of the state. In 2020, the state produced more natural gas from unconventional wells in one year than ever before — 7.1 trillion cubic feet — making it the second-largest producer of gas in the country, behind Texas.
             </p>
             <p>
-                Pennsylvania does not track the volumes of natural gas flared and vented., Instead of taxing these volumes, it applies a fee to each well a company operates regardless of how much oil or gas it produces. The oil and gas industry has argued that Pennsylvania’s per-well fee is a better alternative because it doesn’t deter production.
+                Pennsylvania does not track the volumes of natural gas flared and vented. Instead of taxing these volumes, it applies a fee to each well a company operates regardless of how much oil or gas it produces. The oil and gas industry has argued that Pennsylvania’s per-well fee is a better alternative because it doesn’t deter production.
             </p>
             <p>
                 The Pennsylvania Department of Environmental Protection’s Air Quality Program is primarily responsible for ensuring that methane and other emissions from oil wells meet the standards established through the Clean Air Act and Pennsylvania’s Air Pollution Control Act.
@@ -2420,7 +2418,7 @@
                 Flaring and venting are permitted for the vast majority of the more than 10,000 unconventional gas wells in Pennsylvania under what is known as “Exemption 38.”
             </p>
             <p>
-                Permanent flaring operations, which can be used to control various emissions at a facility, are required to use an enclosed flare., The 2013 change came in the wake of recommendations from the Environmental Protection Agency.
+                Permanent flaring operations, which can be used to control various emissions at a facility, are required to use an enclosed flare. The 2013 change came in the wake of recommendations from the Environmental Protection Agency.
             </p>
             <p>
                 Enclosed flares cut down on noise and light pollution and are typically less likely to be inefficient in the field compared to open flares. Flare enclosures may inhibit satellites from picking up illumination, according to Gunnar Schade, an atmospheric scientist at Texas A&M University who’s studied flaring.
@@ -2470,7 +2468,7 @@
                             <p class="hwrd-big-number">1,729,909,221,985</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -2480,7 +2478,7 @@
                             <p class="hwrd-big-number">980,733,339,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared and vented gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -2665,7 +2663,7 @@
                         txupdate(txdata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -2730,7 +2728,7 @@
                             <p class="hwrd-big-number">12,003,315,355</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -2740,7 +2738,7 @@
                             <p class="hwrd-big-number">11,390,778,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>oof flared and vented gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -2922,7 +2920,7 @@
                         utupdate(utdata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -2978,12 +2976,10 @@
                             <p class="hwrd-big-number">13,979,065,396</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
-                    <div>
-                        <p>The West Virginia Department of Environmental Protection does not require companies to submit records of flaring and venting activities. </p>
-                    </div>
+
                     <!--STATE OVERSIGHT-->
                     <div>
                         <p style="color: #5f7ebf; font-weight: bold; padding-bottom: 3px;">State oversight:</p>
@@ -3156,7 +3152,7 @@
                         wvupdate(wvdata1)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see satellite-recorded flaring volumes. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
@@ -3164,7 +3160,7 @@
                 West Virginia developed into one of the nation’s top natural gas-producing states during last decade’s fracking boom in Appalachia, surpassing its historic King Coal economy for the first time in 2019, according to the Energy Information Administration.
             </p>
             <p>
-                The state’s Sen. Joe Manchin (D-W.V.), a conservative Democrat who chairs the Senate’s Committee on Energy and Natural Resources, became a roadblock in the passage of the Biden administration’s infrastructure bill, which included ambitious climate reform policies.  Manchin’s refusal to support tighter environmental regulations on the oil and gas industry delayed passage of the bill, which was signed into law only after those provisions were stripped out.
+                The state’s Sen. Joe Manchin, a conservative Democrat who chairs the Senate’s Committee on Energy and Natural Resources, became a roadblock in the passage of the Biden administration’s infrastructure bill, which included ambitious climate reform policies.  Manchin’s refusal to support tighter environmental regulations on the oil and gas industry delayed passage of the bill, which was signed into law only after those provisions were stripped out.
             </p>
             <p>
                 Production in West Virginia occurs mostly in the Marcellus, Utica and Devonian shales. The state prohibits the waste of natural gas but allows flaring that is “reasonably necessary” for drilling and safety. The West Virginia Department of Environmental Protection, the agency responsible for permitting, doesn’t maintain data on the amount of flaring and venting companies conduct, although companies are required to keep emissions data and make it available upon request to the department.            </p>
@@ -3229,7 +3225,7 @@
                             <p class="hwrd-big-number">27,535,172,994</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared gas was detected by the VIIRS satellite.</p>
+                        <p>of flared gas was recorded by the VIIRS satellite.</p>
                     </div>
                     <!--STATE DATA-->
                     <div>
@@ -3239,7 +3235,7 @@
                             <p class="hwrd-big-number">35,937,487,000</p>
                             <p style="text-align: right" class="hwrd-small-unit">cubic feet</p>
                         </div>
-                        <p>of flared and vented gas was reported by companies in production reports.</p>
+                        <p>of flared gas was reported by the state.</p>
                     </div>
                     <!--STATE OVERSIGHT-->
                     <div>
@@ -3413,7 +3409,7 @@
                         wyupdate(wydata3)
 
                     </script>
-                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">States report volumes rounded to the nearest thousand cubic feet. Volumes recorded by satellite have been converted from billion cubic meters.</span>
+                    <span style=" font-family: Arial, sans-serif; font-style: italic; font-size: small;">Click on a year to see the difference between state-reported and satellite-recorded flaring volumes. Note that states report volumes in cubic feet, rounded to the nearest thousand. Volumes recorded by satellite have been converted from billion cubic meters.</span>
                 </div>
             </div>
             <hr class="hwrd-pg-brake">
